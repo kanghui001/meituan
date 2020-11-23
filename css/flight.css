@@ -1,0 +1,138 @@
+/* boot */
+
+.mr-40px{
+	margin-right: 40px !important;
+}
+.header-nav-site img {
+	width: 100%;
+}
+
+/* header-bar */
+
+a:focus {
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+#header {
+	height: 162px;
+}
+#header-bar {
+	background-color: #F8F8F8;
+	height: 40px;
+	font-size: 12px;
+	color: #999;
+}
+#header-bar a:hover {
+	color: #fe8c00;
+	text-decoration: none;
+}
+#barbody {
+	justify-content: space-between;
+}
+.header-content {
+	width: 960px;
+	margin: 0 auto;
+}
+@media (min-width:1200px) {
+	.header-content {
+		width: 1190px;
+	}
+}
+
+/* header-bar-position */
+
+.header-bar-position {
+	float: left;
+	padding-top: 12px;
+}
+.header-bar-position>img {
+	margin-bottom: 4px;
+}
+.city {
+	color: #666;
+}
+.change-city{
+	background-color: #f4f4f4;
+	border: 1px solid #e5e5e5;
+	border-radius: 2px;
+	color: #666;
+	margin: 0 4px;
+	padding: 0 2px;
+}
+.inline {
+	display: inline-block;
+}
+.city-guess {
+	margin: 0 4px;
+	text-decoration: none;
+	cursor: pointer;
+	color: #999;
+}
+#user-entry a {
+	margin-left: 10px;
+	color: #999;
+}
+#user-entry a:first-child {
+	color: #fe8c00;
+}
+
+/* header-bar-nav */
+
+.header-bar-nav {
+	float: right;
+}
+.header-bar-nav .header-nav-first>li {
+	float: left;
+	position: relative;
+	height: 40px;
+	padding: 12px 14px;
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
+}
+.header-bar-nav a {
+	color: #999;
+}
+
+/* header-bar-nav-my */
+
+.header-nav-my {
+	display: none;
+	position: absolute;
+	border: 1px solid #E5E5E5;
+	background-color: #FFFFFF;
+	width: 100%;
+	z-index: 1000;
+	right: -1px;
+	top: 95%;
+	box-shadow: 0 3px 5px 0 rgba(0,0,0,0.1);
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	box-sizing: content-box;
+	text-align: center;
+}
+.header-nav-my a {
+	line-height: 35px;
+}
+.header-nav-my::after {
+	content: "";
+	background: #FFFFFF;
+	width: 76px;
+	height: 3px;
+	position: absolute;
+	top: -2px;
+	right: 0;
+}
+
+/* header-bar-nav-site */
+
+.header-nav-site {
+	display: none;
+	width: 1200px;
+	border-top-left-radius: 4px;
+	padding: 30px 36px 36px 47px;
+}
+@media (max-width:1200px) {
+	.header-nav-site {
+		width: 960px;
+	}
+}
