@@ -206,7 +206,8 @@ CREATE TABLE movie(
 	m_name VARCHAR(20),                  /*电影名*/
 	m_actor VARCHAR(20),                 /*演员名*/
 	m_type  VARCHAR(20),                 /*类型*/
-	m_picture varchar(100)                /*图片*/
+	m_picture varchar(100),                /*图片*/
+	r_moive int                            /*热映电影*/
  );
  
 CREATE TABLE videoHall(
@@ -227,7 +228,7 @@ create table seat(
 CREATE TABLE showtick(
 	sid INT PRIMARY KEY AUTO_INCREMENT,
 	s_time VARCHAR(10),                   /*放映时间*/
-	s_price decimal(3,0),                 /*价格*/
+	s_price VARCHAR(10),,                 /*价格*/
 	vid INT,                                /*放映厅*/
 	mvid INT,                             /*电影名*/
 	seid int,
@@ -272,28 +273,28 @@ insert into showtick values(
 
  /*电影表详情*/
  insert into movie values(
-	null,'除暴','王千源 吴彦祖','动作','../img/chubao.jpj'
+	null,'除暴','王千源 吴彦祖','动作','../img/chubao.jpj',1
  );
  insert into movie values(
-	null,'姜子牙','邓希 杨凝','动漫','../img/jiangziya.jpj'
+	null,'姜子牙','邓希 杨凝','动漫','../img/jiangziya.jpj',1
  );
  insert into movie values(
-	null,'我和我的家乡','葛优 沈腾 邓超','喜剧','../img/jiaxiang.jpj'
+	null,'我和我的家乡','葛优 沈腾 邓超','喜剧','../img/jiaxiang.jpj',1
  );
  insert into movie values(
-	null,'金刚川','张译 吴京','战争','../img/chuan.jpj'
+	null,'金刚川','张译 吴京','战争','../img/chuan.jpj',1
  );
  insert into movie values(
-	null,'八佰','王千源 张译','战争','../img/ba.jpj'
+	null,'八佰','王千源 张译','战争','../img/ba.jpj',2
  );
  insert into movie values(
-	null,'怪物猎人','米拉乔沃维奇','科幻','../img/guai.jpj'
+	null,'怪物猎人','米拉乔沃维奇','科幻','../img/guai.jpj',2
  );
  insert into movie values(
-	null,'夺冠','巩俐','励志','../img/duo.jpj'
+	null,'夺冠','巩俐','励志','../img/duo.jpj',2
  );
  insert into movie values(
-	null,'风平浪静','章雨 宋佳','爱情','../img/feng.jpj'
+	null,'风平浪静','章雨 宋佳','爱情','../img/feng.jpj',2
  );
  
  /*放映厅*/
