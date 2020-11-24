@@ -90,10 +90,12 @@ insert into flight values (null,'14:45','西安','17:25','重庆','咸阳','江�
 ----------------------------*/
 
 create table user(
-id int primary key auto_increment,
-username varchar(255) not null unique,/*姓名*/
-phone varchar(11) not null unique,/*手机号 不为空 长度11*/
-password varchar(255), unique key(username)) engine=innodb;/*密码*/
+	id int primary key auto_increment,
+	username varchar(255) not null unique,/*姓名*/
+	phone varchar(11) not null unique,/*手机号 不为空 长度11*/
+	password varchar(255), unique key(username)
+) engine=innodb;/*密码*/
+
 insert into user(username,phone, password) values('zhangyuan','12345678910','456'),('kanghui', '12345678911','234');
 /*#订单表*/
 create table dingdan(
@@ -318,4 +320,61 @@ insert into showtick values(
  insert into videohall values(
 	null,'RealD-10号厅',120,null
  );
+ 
+ /*----------------------------
+ ----------休闲娱乐————HJY-----
+ ----------------------------*/
+ 
+ create table kind(
+ 	kindid int primary key auto_increment,/*酒吧编号*/
+ 	kindname varchar(20),  /*酒吧名字*/
+ 	score varchar(4),    /*酒吧评分*/
+ 	thinknumber int,    /*酒吧评论数量*/
+ 	address varchar(60),/*酒吧地址*/
+ 	price varchar(10),      /*酒吧价格*/
+ 	detail varchar(60), /*酒吧详情 大包中包小包价格*/
+ 	picture varchar(120), /*酒吧照片*/
+ 	phone varchar(20),    /*酒吧联系电话*/
+ 	worktime varchar(30), /*酒吧工作电话*/
+ 	userid varchar(50),   /*酒吧用户名*/
+ 	userthink varchar(300),/*酒吧用户评论*/
+ 	ktype int /*娱乐设施类型*/
+ );
+ 
+ create table enterment(
+   kid int primary key auto_increment,/*ktv编号*/
+ 	kname varchar(20), /*ktv名字*/
+ 	score varchar(4),    /*ktv评分*/
+ 	thinknumber int,    /*ktv评论数量*/
+ 	address varchar(60),/*ktv地址*/
+ 	price varchar(10),      /*ktv价格*/
+ 	detail varchar(60), /*ktv详情 大包中包小包价格*/
+ 	picture varchar(120), /*ktv照片*/
+ 	phone varchar(20),    /*ktv联系电话*/
+ 	worktime varchar(30), /*KTV工作时间*/
+ 	userid varchar(50),   /*ktv用户名*/
+ 	userthink varchar(300),/*ktv用户评论*/
+ 	ktype int, /*娱乐设施类型*/
+ 	foreign key (ktype) references kind(kindid)
+ );
+ 
+ create table item(                   /*酒吧里的售酒套餐*/
+ 	iid int primary key auto_increment,/*酒编号*/
+ 	alcohol varchar(20),/*酒的套餐名*/
+ 	sellnumber varchar(20),/*销售量*/
+ 	date varchar(30),/*活动截止日期*/
+ 	newprice int,/*现价*/
+ 	beforeprice varchar(),/*原价*/
+ 	kid int, /*具体的某家娱乐设施*/
+ 	foreign key (kid) references enterment(kid)
+ );
+ 
+ insert into kind values(null,'桃醺Bar酒吧（老城根店）','5分','322人评论','清吧|红庙坡莲湖区大兴东路37号 （宜必思酒店对面)','人均 ¥ 75','88元/券，小聚多人科罗娜/福佳白2选1小食套餐，198元/券，精酿混搭啤酒多人畅饮小食套餐，68元/券，微醺鸡尾酒套','img/hjy_img/taoxun_picture/taoxushouye.jpg','营业时间： 周一至周日 19:00-03:00','营业时间： 周一至周日 19:00-03:00','Uubabee','氛围超级棒，喜欢喜欢~推荐！',2);
+ insert into kind values(null,'隐域酒廊•Flagship','5分','11人评论','清吧|高新路沿线雁塔区高新区光泰路创业咖啡街区海趣餐厅往北走50米','人均 ¥ 107','29元/券，【女士专享特调鸡尾酒】，99元/券，福佳白精酿啤酒套餐，49元/券，墨西哥风味小食套餐，59元/券，苏格','img/hjy_img/yinyu_picture/yinyushouye.jpg','电话： 029-89199890','营业时间： 周一至周日 15:00-02:00','EpZ529724357','凑巧遇到了威士忌的评鉴会，是很放松的一天咯，周末万岁',2);
+ 
+ insert into enterment values(null,'魔方ktv','5分','2013','量贩式KTV|小寨雁塔区小寨长安中路65号金莎广场7楼','人均  77','小包3小时98元,中包3小时98元','img/hjy_img/mofang_picture/mofangzhuye.jpg','电话： 029-63666555','营业时间： 周一至周日 13:00-06:00','仙女届扛把子y','和小姐妹团购，强烈推荐，音响超棒，服务也特别好！ ，环境很棒，很干净，',1,null);
+ insert into enterment values(null,'乐唱好声音ktv','4分','17114','量贩式KTV|未央路沿线未央区凤城二路东段（近未央路）','人均  46','小包6小时98元,中包6小时98元','img/hjy_img/lechang_picture/lechangshouye.jpg','电话： 029-62296666/13572063411','营业时间： 周一至周日 12:00-06:00','哈喽扑扑星 ','好久都没去过KTV了，哈哈，今天和朋友一起来唱个歌，地方挺好找的。这块的音效太震撼了，唱歌也不费劲，高低音都能很好的消化，自己都觉得自己歌神上身了，，我都不好意思夸自己了，服务很赞，都挺热情的。整体都感觉很ok。下次还会在去。'1,null);
+ 
+ 
+ insert into item(null,'福佳白精酿啤酒套餐','已售93','截止日期:2021年09月28日',99,' 门店价180','2.1',null);/*2.1代表酒吧里的美酒套餐*/
  
