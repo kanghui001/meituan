@@ -90,15 +90,21 @@ insert into flight values (null,'14:45','西安','17:25','重庆','咸阳','江�
 ----------------------------*/
 
 create table user(
-	id int primary key auto_increment,
-	username varchar(255) not null unique,
-	phone varchar(11) not null unique,
-	password varchar(255), unique key(username)
-) engine=innodb;
-
-create table item
-
+id int primary key auto_increment,
+username varchar(255) not null unique,/*姓名*/
+phone varchar(11) not null unique,/*手机号 不为空 长度11*/
+password varchar(255), unique key(username)) engine=innodb;/*密码*/
 insert into user(username,phone, password) values('zhangyuan','12345678910','456'),('kanghui', '12345678911','234');
+/*#订单表*/
+create table dingdan(
+dd_id int primary key auto_increment  ,/*订单id 自增 不为空 主键*/
+dd_name  varchar(100) not null, /*订单名称 */
+dd_time datetime,/*订单时间 true 为美食 false为电影*/
+dd_yyname varchar(40),/*影院名称*/
+dd_date int,/*数量*/
+dd_who	boolean, /*true为美食 false为电影*/
+foreign key(dd_id) references user(id)/*设置外键和user表相关联*/
+);
 
 /*----------------------------
 ----------民宿————LXM---------
