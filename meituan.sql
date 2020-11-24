@@ -96,6 +96,8 @@ create table user(
 	password varchar(255), unique key(username)
 ) engine=innodb;
 
+create table item
+
 insert into user(username,phone, password) values('zhangyuan','12345678910','456'),('kanghui', '12345678911','234');
 
 /*----------------------------
