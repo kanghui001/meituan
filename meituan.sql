@@ -9,36 +9,36 @@ use meituan;
 ----------------------------*/
 
 create table travel(
-	tid int primary key auto_increment,
-	tname varchar(5)
+	tid int primary key auto_increment,			/*旅游种类id*/
+	tname varchar(5)							/*旅游名称*/
 );
 
 create table airLine(
-	aid int primary key auto_increment,
-	route varchar(10),
-	img varchar(50),
-	tid int,
+	aid int primary key auto_increment,			/*航线id*/
+	route varchar(10),							/*航线*/
+	img varchar(50),							/*航线图片*/
+	tid int,									/*航线对应的旅游种类id*/
 	foreign key (tid) references travel(tid)
 );
 
 create table flight(
-	fid int primary key auto_increment,
-	startTime varchar(10),
-	startPos varchar(8),
-	endTime varchar(10),
-	endPos varchar(8),
-	startAir varchar(6),
-	endAir varchar(6),
-	flyDate varchar(10),
-	company varchar(6),
-	price decimal(6,2),
-	nonStop boolean,
-	hunger boolean,
-	hot boolean,
-	airType varchar(20),
-	onTime float,
-	tid int,
-	foreign key (tid) references travel(tid)
+	fid int primary key auto_increment,			/*具体航线id*/
+	startTime varchar(10),						/*起飞时间*/
+	startPos varchar(8),						/*起点*/
+	endTime varchar(10),						/*抵达时间*/
+	endPos varchar(8),							/*目的地*/
+	startAir varchar(6),						/*出发机场*/
+	endAir varchar(6),							/*目的机场*/
+	flyDate varchar(10),						/*起飞日期*/
+	company varchar(6),							/*飞机所属公司*/
+	price decimal(6,2),							/*价格*/
+	nonStop boolean,							/*是否直飞：true为直飞*/
+	hunger boolean,								/*true为票少*/
+	hot boolean,								/*true为特惠*/
+	airType varchar(20),						/*飞机型号*/
+	onTime float,								/*准点率：小于1的两位小数*/
+	aid int,									/*对应的航线id*/
+	foreign key (tid) references airLine(aid)	
 );
 
 insert into travel values (1,'海浪沙滩');
@@ -70,20 +70,20 @@ insert into flight values (null,'13:45','西安','16:25','三亚','咸阳','凤�
 insert into flight values (null,'14:45','西安','17:25','三亚','咸阳','凤凰','2020-11-30','首都航空','1040','true','false','false','JD5679 空客319(中)','0.76',1);
 
 
-insert into flight values (null,'06:45','西安','09:25','重庆','咸阳','江北','2020-11-30','东方航空','310','false','true','false','JD5679 空客319(中)','0.76',1);
-insert into flight values (null,'07:45','西安','11:25','重庆','咸阳','江北','2020-11-30','东方航空','310','false','true','false','JD5679 空客319(中)','0.76',1);
-insert into flight values (null,'08:45','西安','12:25','重庆','咸阳','江北','2020-11-30','东方航空','310','false','true','false','JD5679 空客319(中)','0.76',1);
-insert into flight values (null,'12:45','西安','15:25','重庆','咸阳','江北','2020-11-30','东方航空','310','true','false','false','JD5679 空客319(中)','0.76',1);
-insert into flight values (null,'13:45','西安','16:25','重庆','咸阳','江北','2020-11-30','东方航空','310','true','false','false','JD5679 空客319(中)','0.76',1);
-insert into flight values (null,'14:45','西安','17:25','重庆','咸阳','江北','2020-11-30','东方航空','310','true','false','true','JD5679 空客319(中)','0.76',1);
+insert into flight values (null,'06:45','西安','09:25','重庆','咸阳','江北','2020-11-30','东方航空','310','false','true','false','JD5679 空客319(中)','0.76',2);
+insert into flight values (null,'07:45','西安','11:25','重庆','咸阳','江北','2020-11-30','东方航空','310','false','true','false','JD5679 空客319(中)','0.76',2);
+insert into flight values (null,'08:45','西安','12:25','重庆','咸阳','江北','2020-11-30','东方航空','310','false','true','false','JD5679 空客319(中)','0.76',2);
+insert into flight values (null,'12:45','西安','15:25','重庆','咸阳','江北','2020-11-30','东方航空','310','true','false','false','JD5679 空客319(中)','0.76',2);
+insert into flight values (null,'13:45','西安','16:25','重庆','咸阳','江北','2020-11-30','东方航空','310','true','false','false','JD5679 空客319(中)','0.76',2);
+insert into flight values (null,'14:45','西安','17:25','重庆','咸阳','江北','2020-11-30','东方航空','310','true','false','true','JD5679 空客319(中)','0.76',2);
 
 
-insert into flight values (null,'06:45','西安','09:25','重庆','咸阳','江北','2020-11-30','西部航空','310','false','true','false','JD5679 空客319(中)','0.76',1);
-insert into flight values (null,'07:45','西安','11:25','重庆','咸阳','江北','2020-11-30','西部航空','310','false','true','false','JD5679 空客319(中)','0.76',1);
-insert into flight values (null,'08:45','西安','12:25','重庆','咸阳','江北','2020-11-30','西部航空','310','false','true','false','JD5679 空客319(中)','0.76',1);
-insert into flight values (null,'12:45','西安','15:25','重庆','咸阳','江北','2020-11-30','西部航空','310','true','false','false','JD5679 空客319(中)','0.76',1);
-insert into flight values (null,'13:45','西安','16:25','重庆','咸阳','江北','2020-11-30','西部航空','310','true','false','false','JD5679 空客319(中)','0.76',1);
-insert into flight values (null,'14:45','西安','17:25','重庆','咸阳','江北','2020-11-30','西部航空','310','true','false','true','JD5679 空客319(中)','0.76',1);
+insert into flight values (null,'06:45','西安','09:25','重庆','咸阳','江北','2020-11-30','西部航空','310','false','true','false','JD5679 空客319(中)','0.76',2);
+insert into flight values (null,'07:45','西安','11:25','重庆','咸阳','江北','2020-11-30','西部航空','310','false','true','false','JD5679 空客319(中)','0.76',2);
+insert into flight values (null,'08:45','西安','12:25','重庆','咸阳','江北','2020-11-30','西部航空','310','false','true','false','JD5679 空客319(中)','0.76',2);
+insert into flight values (null,'12:45','西安','15:25','重庆','咸阳','江北','2020-11-30','西部航空','310','true','false','false','JD5679 空客319(中)','0.76',2);
+insert into flight values (null,'13:45','西安','16:25','重庆','咸阳','江北','2020-11-30','西部航空','310','true','false','false','JD5679 空客319(中)','0.76',2);
+insert into flight values (null,'14:45','西安','17:25','重庆','咸阳','江北','2020-11-30','西部航空','310','true','false','true','JD5679 空客319(中)','0.76',2);
 
 /*----------------------------
 ----------用户————ZY----------
