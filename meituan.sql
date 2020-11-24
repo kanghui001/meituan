@@ -96,8 +96,6 @@ create table user(
 	password varchar(255), unique key(username)
 ) engine=innodb;
 
-create table item
-
 insert into user(username,phone, password) values('zhangyuan','12345678910','456'),('kanghui', '12345678911','234');
 
 /*----------------------------
@@ -151,7 +149,6 @@ create table shopping (
 	price varchar(128)								#商品价格
 );
 
-insert into shopping values(null,'img/food/1.jpg','牛水煮·功夫水煮牛肉（大悦城店）','4.3分','14条评论','雁塔区慈恩路西安大悦城B1层','人均¥50' );
 insert into shopping values(null,'img/food/1.jpg','牛水煮·功夫水煮牛肉（大悦城店）','4.3分','14条评论','雁塔区慈恩路西安大悦城B1层','人均¥50' );
 insert into shopping values(null,'img/food/2.jpg','云贵过桥米线（车城花园店）','5分','6691条评论','高陵区车城花园东门南50米西安银行隔壁','人均¥15' );
 insert into shopping values(null,'img/food/3.jpg','蝎王府羊蝎子(西稍门点)','4.9分','9631条评论','莲湖区西稍门向北50米东路(开元商城对面)','人均¥58' );
