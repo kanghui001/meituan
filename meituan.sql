@@ -335,18 +335,18 @@ insert into showtick values(
  ----------------------------*/
  
  create table enterment(
-    kid int primary key auto_increment,/*ktv编号*/
- 	kname varchar(20), /*ktv名字*/
- 	score varchar(4),    /*ktv评分*/
- 	thinknumber int,    /*ktv评论数量*/
- 	address varchar(60),/*ktv地址*/
- 	price varchar(10),      /*ktv价格*/
- 	detail varchar(60), /*ktv详情 大包中包小包价格*/
- 	picture varchar(120), /*ktv照片*/
- 	phone varchar(20),    /*ktv联系电话*/
- 	worktime varchar(30), /*KTV工作时间*/
- 	userid varchar(50),   /*ktv用户名*/
- 	userthink varchar(300),/*ktv用户评论*/
+    kid int primary key auto_increment,/*编号*/
+ 	kname varchar(20), /*名字*/
+ 	score varchar(4),    /*评分*/
+ 	thinknumber int,    /*评论数量*/
+ 	address varchar(60),/*地址*/
+ 	price varchar(10),      /*价格*/
+ 	detail varchar(60), /*价格详情 大包中包小包or酒吧套餐*/
+ 	picture varchar(120), /*照片*/
+ 	phone varchar(20),    /*联系电话*/
+ 	worktime varchar(30), /*工作时间*/
+ 	userid varchar(50),   /*用户名*/
+ 	userthink varchar(300),/*用户评论*/
  	ktype int /*娱乐设施类型:1为KTV	2为酒吧*/
  );
  
