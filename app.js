@@ -1,5 +1,5 @@
 const express = require('express');
-const router = require('./router/router.js')
+const flight = require('./router/flight.js')
 const bodyParser = require('body-parser');
 
 const app = express();
@@ -10,4 +10,4 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static('./html'));
 
-app.use('/mt', router);
+app.use('/fly', flight);
