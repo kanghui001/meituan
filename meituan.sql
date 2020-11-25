@@ -354,7 +354,7 @@ insert into showtick values(
  	iid int primary key auto_increment,/*酒编号*/
  	alcohol varchar(20),/*酒的套餐名*/
  	sellnumber varchar(20),/*销售量*/
- 	date varchar(30),/*活动截止日期*/
+ 	idate varchar(30),/*活动截止日期*/
  	newprice decimal(8,2),/*现价*/
  	beforeprice varchar(10),/*原价*/
  	kid int, /*具体的某家娱乐设施*/
@@ -367,5 +367,5 @@ insert into showtick values(
  insert into enterment values(null,'乐唱好声音ktv','4分','17114','量贩式KTV|未央路沿线未央区凤城二路东段（近未央路）','人均  46','小包6小时98元,中包6小时98元','img/hjy_img/lechang_picture/lechangshouye.jpg','电话： 029-62296666/13572063411','营业时间： 周一至周日 12:00-06:00','哈喽扑扑星 ','好久都没去过KTV了，哈哈，今天和朋友一起来唱个歌，地方挺好找的。这块的音效太震撼了，唱歌也不费劲，高低音都能很好的消化，自己都觉得自己歌神上身了，，我都不好意思夸自己了，服务很赞，都挺热情的。整体都感觉很ok。下次还会在去。',1);
  
  
- insert into item values(null,'福佳白精酿啤酒套餐','已售93','截止日期:2021年09月28日',99,' 门店价180',1);/*2.1代表酒吧里的美酒套餐*/
+ insert into item values(null,'福佳白精酿啤酒套餐','已售93','截止日期:2021年09月28日',99,' 门店价180',1);/*id为1的enterment*/
  
