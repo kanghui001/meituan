@@ -47,20 +47,20 @@ create table ticket(
 	tiden varchar(18),							/*乘客证件号*/	
 	tphone varchar(11),							/*乘客手机号*/	
 	fid int,									/*对应的具体航线id*/
-	foreign key(fid) references flight(fid)
+	userid int									/*用户id*/
 );
 
 insert into travel values (1,'海浪沙滩');
 insert into travel values (2,'美食之都');
 
-insert into airLine values (null,'西安-三亚','../img/air/summer_SYX.jpg','1');
-insert into airLine values (null,'西安-三亚','../img/air/summer_SYX.jpg','1');
-insert into airLine values (null,'西安-三亚','../img/air/summer_SYX.jpg','1');
+insert into airLine values (null,'西安-三亚','../img/air/summer_SYX.jpg',1);
+insert into airLine values (null,'西安-三亚','../img/air/summer_SYX.jpg',1);
+insert into airLine values (null,'西安-三亚','../img/air/summer_SYX.jpg',1);
 
 
-insert into airLine values (null,'西安-重庆','../img/air/summer_CKG.jpg','2');
-insert into airLine values (null,'西安-重庆','../img/air/summer_CKG.jpg','2');
-insert into airLine values (null,'西安-重庆','../img/air/summer_CKG.jpg','2');
+insert into airLine values (null,'西安-重庆','../img/air/summer_CKG.jpg',2);
+insert into airLine values (null,'西安-重庆','../img/air/summer_CKG.jpg',2);
+insert into airLine values (null,'西安-重庆','../img/air/summer_CKG.jpg',2);
 
 
 insert into flight values (null,'06:45','西安','09:25','三亚','咸阳','凤凰','2020-11-30','南方航空','1000','false','true','false','JD5679 空客319(中)','0.76',1);
