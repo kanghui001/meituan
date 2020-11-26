@@ -1,54 +1,10 @@
 set names UTF8;
 
-drop database if exists meituan;
-create database meituan charset = utf8;
 use meituan;
 
 /*----------------------------
 ----------飞机票————WMY-------
 ----------------------------*/
-
-create table travel(
-	tid int primary key auto_increment,			/*旅游种类id*/
-	tname varchar(5)							/*旅游名称*/
-);
-
-create table airLine(
-	aid int primary key auto_increment,			/*航线id*/
-	route varchar(10),							/*航线*/
-	img varchar(50),							/*航线图片*/
-	tid int,									/*航线对应的旅游种类id*/
-	foreign key (tid) references travel(tid)
-);
-
-create table flight(
-	fid int primary key auto_increment,			/*具体航线id*/
-	startTime varchar(10),						/*起飞时间*/
-	startPos varchar(8),						/*起点*/
-	endTime varchar(10),						/*抵达时间*/
-	endPos varchar(8),							/*目的地*/
-	startAir varchar(6),						/*出发机场*/
-	endAir varchar(6),							/*目的机场*/
-	flyDate varchar(10),						/*起飞日期*/
-	company varchar(6),							/*飞机所属公司*/
-	price decimal(6,2),							/*价格*/
-	nonStop boolean,							/*是否直飞：true为直飞*/
-	hunger boolean,								/*true为票少*/
-	hot boolean,								/*true为特惠*/
-	airType varchar(20),						/*飞机型号*/
-	onTime float,								/*准点率：小于1的两位小数*/
-	aid int,									/*对应的航线id*/
-	foreign key (aid) references airLine(aid)	
-);
-
-create table ticket(
-	ticketId int primary key auto_increment,	/*机票id*/
-	tname varchar(6),							/*乘客姓名*/	
-	tiden varchar(18),							/*乘客证件号*/	
-	tphone varchar(11),							/*乘客手机号*/	
-	fid int,									/*对应的具体航线id*/
-	userid int									/*用户id*/
-);
 
 insert into travel values (1,'海浪沙滩');
 insert into travel values (2,'美食之都');
@@ -98,52 +54,11 @@ insert into flight values (null,'14:45','西安','17:25','重庆','咸阳','江�
 ----------用户————ZY----------
 ----------------------------*/
 
-create table user(
-	id int primary key auto_increment,
-	username varchar(255) not null unique,/*姓名*/
-	phone varchar(11) not null unique,/*手机号 不为空 长度11*/
-	password varchar(255), unique key(username)
-) engine=innodb;/*密码*/
-
 insert into user(username,phone, password) values('zhangyuan','12345678910','456'),('kanghui', '12345678911','234');
-/*#订单表*/
-create table dingdan(
-dd_id int primary key auto_increment  ,/*订单id 自增 不为空 主键*/
-dd_name  varchar(100) not null, /*订单名称 */
-dd_time datetime,/*订单时间 true 为美食 false为电影*/
-dd_yyname varchar(40),/*影院名称*/
-dd_date int,/*数量*/
-dd_who	boolean, /*true为美食 false为电影*/
-foreign key(dd_id) references user(id)/*设置外键和user表相关联*/
-);
 
 /*----------------------------
 ----------民宿————LXM---------
 ----------------------------*/
-
-create table minsu(
-	mnid int primary key auto_increment,
-	mname varchar(16) not null,
-	salary decimal(6,2),   #9999.99
-	intro varchar(100),
-	mtype varchar(50) not null,
-	promotion varchar(100),
-	mhost varchar(20) not null,
-	location varchar(30) not null,
-	rating decimal(2,1),
-	reviews varchar(200),
-	amenities varchar(100) not null,
-	notice varchar(100),
-	Fimg varchar(40),
-	Simg varchar(40),
-	Timg varchar(40),
-	anxinzhu boolean,
-	yixiaodu boolean,
-	jinditie boolean,
-	Iflist boolean,
-	Ifbrand boolean,
-	IfLDA boolean
-);
 
 insert into minsu values(null,'柚子·少女之心',423.3,'临近钟楼/回民街/古城墙/钟楼地铁口/高铁站直达/超清极米投影/浴缸闺蜜房','整套80㎡,两间卧室:1厅1厨1卫,2x1.8米双人床x2,可住4人','首单特惠,新用户首单支付享8.5折','柚子Home','西安碑林区城市之心A座',4.8,'房子超大,无异味,是外出游玩的绝佳选择','Wi-Fi,有线网络,暖气,空调','退款权益:房东已为您提供预定成功后15分钟内免费取消权益。(该权益不受房源退订规则限制)','./img/minsu/youzi_1.jpg','./img/minsu/youzi_2.jpg','./img/minsu/youzi_3.jpg',true,true,false,true,false,true);
 insert into minsu values(null,'粟居·home',168,'贰号房子【麦田捕梦网】大明宫市中心地铁旁近钟楼回民街印第安波西米亚风大床房特惠点头像看其它房源','整套55㎡,两间卧室:1厅1厨1卫,双人床x1,可住2人','天天特价:每晚168元，2020.04.08-2020.12.30期间入住可用','Iris冯','西安未央区未央路33号',5.0,'住过最满意的民宿,我特别的喜欢,经常过来入住','Wi-Fi,有线网络,暖气,空调','退订规则:宽松，入住前1天12:00前退订，可获100%退款。之后退订不退款','./img/minsu/suju_1.jpg','./img/minsu/suju_2.jpg','./img/minsu/suju_3.jpg',true,true,false,true,true,false);
@@ -157,16 +72,6 @@ insert into minsu values(null,'15南舍民宿',75.65,'NO.5市中心/地铁口/�
 /*----------------------------
 ----------美食————KH----------
 ----------------------------*/
-
-create table shopping (
-	aid int primary key auto_increment,
-	sm_img varchar(128),			 				#商品图片
-	lname varchar(48),								#商品名字
-	grade varchar(10),								#商品评分
-	reviews varchar(128),							#商品评论
-	title varchar(128), 				 			#地址
-	price varchar(128)								#商品价格
-);
 
 insert into shopping values(null,'img/food/1.jpg','牛水煮·功夫水煮牛肉（大悦城店）','4.3分','14条评论','雁塔区慈恩路西安大悦城B1层','人均¥50' );
 insert into shopping values(null,'img/food/2.jpg','云贵过桥米线（车城花园店）','5分','6691条评论','高陵区车城花园东门南50米西安银行隔壁','人均¥15' );
@@ -182,17 +87,7 @@ insert into shopping values(null,'img/food/11.jpg','口口私房锅（立丰国�
 insert into shopping values(null,'img/food/12.jpg','尚学社的理想书店','5分','585条评论','雁塔区陕西省西安市雁塔区科技路195号世纪颐园B座10201号','人均¥26');
 insert into shopping values(null,'img/food/13.jpg','金玉鲜烤串','4.6分','9条评论','碑林区环城南路45号时代诺利达大厦一层10105号','人均¥70');
 insert into shopping values(null,'img/food/14.jpg','欧味轩艺术蛋糕','4.8分','4483条评论','长安区南长安街樊家十字112号（人人家超市对面）','人均¥40' );
-
 insert into shopping values(null,'img/food/15.jpg','金迈源自助涮烤王','4.2分','19453条评论','碑林区咸宁中路华润万家旁（乐宁会购物广场4楼）','人均¥50');
-
-#插入左侧的表
-create table right_side(
-	fid int primary key auto_increment,
-	sm_img varchar(128),			 			#商品图片
-	lname varchar(128),							#商品名字
-	address varchar(128),						#地址
-	price varchar(32)								#价格
-);
 
 insert into right_side values(null,'img/food/01.jpg','泰熙家(赛高店)','未央路沿线','¥32.0');
 insert into right_side values(null,'img/food/02.jpg','杨翔豆皮涮羊肉(西咸万象城店)','三桥','¥89.0');
@@ -212,50 +107,6 @@ insert into right_side values(null,'img/food/014.jpg','金迈源自助涮王','�
 /*----------------------------
 ----------猫眼电影————SBW-----
 ----------------------------*/
-
-CREATE TABLE cinema(                   /*影院表*/
-	cid INT PRIMARY KEY AUTO_INCREMENT,
-	c_name VARCHAR(20),                   /*影院名*/
-	c_loction VARCHAR(50),                /*地址*/
-	c_tel CHAR(11)                        /*电话*/
-);
-
-CREATE TABLE movie(
-	mvid INT PRIMARY KEY AUTO_INCREMENT,
-	m_name VARCHAR(20),                  /*电影名*/
-	m_actor VARCHAR(20),                 /*演员名*/
-	m_type  VARCHAR(20),                 /*类型*/
-	m_picture varchar(100),                /*图片*/
-	r_moive int                            /*热映电影*/
- );
- 
-CREATE TABLE videoHall(
-	vid INT PRIMARY KEY AUTO_INCREMENT,
-	v_no VARCHAR(10),                     /*放映厅*/
-	v_seat INT,                            /*座位数*/
-	cid INT,
-	foreign key (cid) references cinema (cid)/*影院名*/
-);
-
-create table seat(
-	seid INT PRIMARY KEY AUTO_INCREMENT,
-	isSit boolean,
-	vid INT,
-	foreign key (vid) references videoHall(vid)
-);
-	
-CREATE TABLE showtick(
-	sid INT PRIMARY KEY AUTO_INCREMENT,
-	s_time VARCHAR(10),                   /*放映时间*/
-	s_price VARCHAR(10),                 /*价格*/
-	vid INT,                                /*放映厅*/
-	mvid INT,                             /*电影名*/
-	seid int,
-	foreign key (mvid) references movie (mvid),
-	foreign key (seid) references seat (seid),
-	foreign key (vid) references videoHall (vid)
-);
-	
 	
 	 /*影院表*/
 insert into cinema values(
@@ -333,38 +184,7 @@ insert into showtick values(
  /*----------------------------
  ----------休闲娱乐————HJY-----
  ----------------------------*/
- 
- set names utf8;
- drop database if exists meituan;
- create database meituan charset=utf8;
- use meituan;
- create table enterment(               /*enterment代表休闲娱乐*/
-   kid int primary key auto_increment,/*ktv编号*/     /*酒吧编号*/
- 	kname varchar(20), /*ktv名字*/                      /*酒吧名字*/
- 	score varchar(4),    /*ktv评分*/                    /*酒吧评分*/
- 	thinknumber int,    /*ktv评论数量*/                 /*酒吧评论数量*/
- 	address varchar(60),/*ktv地址*/                    /*酒吧地址*/
- 	price varchar(10),      /*ktv价格*/               /*酒吧价格*/
- 	detail varchar(60), /*ktv详情 大包中包小包价格*/  /*酒吧详情 大包中包小包价格*/
- 	picture varchar(120), /*ktv照片*/                /*酒吧照片*/
- 	phone varchar(20),    /*ktv联系电话*/             /*酒吧联系电话*/
- 	worktime varchar(30), /*KTV工作时间*/              /*酒吧工作电话*/
- 	userid varchar(50),   /*ktv用户名*/                /*酒吧用户名*/
- 	userthink varchar(300),/*ktv用户评论*/             /*酒吧用户评论*/
- 	ktype int /*娱乐设施类型 1为ktv 2为酒吧*/
-  /*foreign key (ktype) references kind(kindid)*/
- );
- create table item(                   /*酒吧里的售酒套餐*/
- 	aid int primary key auto_increment,/*酒编号*/
- 	alcohol varchar(20),               /*酒的套餐名*/
- 	sellnumber varchar(20),            /*销售量*/
- 	adate varchar(30),                 /*活动截止日期*/
- 	newprice int,                       /*现价*/
- 	beforeprice varchar(20),              /*原价*/
- 	akid int,        /*具体的某家娱乐设施*/
- 	foreign key (akid) references enterment(kid)/*具体的某家娱乐设施*/
- );
- 
+
  insert into enterment values(null,'桃醺Bar酒吧（老城根店）','5分','322人评论','清吧|红庙坡莲湖区大兴东路37号 （宜必思酒店对面)','人均 ¥ 75','88元/券，小聚多人科罗娜/福佳白2选1小食套餐，198元/券，精酿混搭啤酒多人畅饮小食套餐，68元/券，微醺鸡尾酒套','img/hjy_img/taoxun_picture/taoxushouye.jpg','营业时间： 周一至周日 19:00-03:00','营业时间： 周一至周日 19:00-03:00','Uubabee','氛围超级棒，喜欢喜欢~推荐！',2);
  insert into enterment values(null,'隐域酒廊•Flagship','5分','11人评论','清吧|高新路沿线雁塔区高新区光泰路创业咖啡街区海趣餐厅往北走50米','人均 ¥ 107','29元/券，【女士专享特调鸡尾酒】，99元/券，福佳白精酿啤酒套餐，49元/券，墨西哥风味小食套餐，59元/券，苏格','img/hjy_img/yinyu_picture/yinyushouye.jpg','电话： 029-89199890','营业时间： 周一至周日 15:00-02:00','EpZ529724357','凑巧遇到了威士忌的评鉴会，是很放松的一天咯，周末万岁',2);
  insert into enterment values(null,'魔方ktv','5分','2013','量贩式KTV|小寨雁塔区小寨长安中路65号金莎广场7楼','人均  77','小包3小时98元,中包3小时98元','img/hjy_img/mofang_picture/mofangzhuye.jpg','电话： 029-63666555','营业时间： 周一至周日 13:00-06:00','仙女届扛把子y','和小姐妹团购，强烈推荐，音响超棒，服务也特别好！ ，环境很棒，很干净',1);
