@@ -99,6 +99,15 @@ create table minsu(
 	Ifbrand boolean,
 	IfLDA boolean
 );
+create table Reserve(	
+  pid int primary key auto_increment,   /*订单*/
+	checkinTime datetime,   /*入住时间*/
+	checkoutTime datetime,  /*离店时间*/
+	pcount int,              /*入住人数*/
+	name varchar(10),            /*姓名*/
+	insurance boolean,        /*是否购买保险*/
+	foreign key(pid) references minsu(mnid)
+);
 
 /*----------------------------
 ----------美食————KH----------

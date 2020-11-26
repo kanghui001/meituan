@@ -69,6 +69,14 @@ insert into minsu values(null,'粟居·home',168,'贰号房子【麦田捕梦网
 insert into minsu values(null,'迷家',111.2,'市图书馆地铁口,近高铁,机场,钟楼,大明宫,汉城湖,可长租','整套62㎡,1间卧室:0厅1厨1卫,1张双人床,宜住2人','今夜特价:10:00~次日3:00预定，享受当晚8折优惠。连住优惠:7天以上9折优惠','小杰子0213','西安未央区文景北路11号',5.0,'我还想住第二次 房东姐姐人超级好 也很温柔 很贴心 厨房用具也很齐全 躺在床上就感觉 是公主 哈哈哈哈哈 虽然我男朋友每次就这么叫我 真的是很满意的一次 还会住de','Wi-Fi,有线网络,暖气,空调','极速退款:15分钟内免费取消,房东已为您提供预定成功后15分钟内免费取消权益。（该权益不受房源退订规则限制）','./img/minsu/mijia_1.jpg','./img/minsu/mijia_2.jpg','./img/minsu/mijia_3.jpg',true,true,false,true,false,true);
 insert into minsu values(null,'15南舍民宿',75.65,'NO.5市中心/地铁口/钟楼回民街/小寨一条线/飘窗/透明气泡风/独立单间大床房','单间㎡,1间卧室:0厨1公卫,1张双人床,宜住2人','今夜特价:10:00~次日3:00预订，享受当晚8.5折优惠。新用户首单支付享8.5折','南舍民宿','西安莲湖区龙首村宫园壹号一期',4.8,'很喜欢,位置离地铁口近,房间设置齐全还非常干净,性价比超高,床也非常的舒服,房东姐姐很有耐心,希望下次有机会去体验一下别的房间','Wi-Fi,有线网络,暖气,空调','入住的前5天12:00前退订，可获100%退款。之后退订不退款。随时可预订,最少预订1天, 最多预订天数不限。','./img/minsu/15nanshe_1.jpg','./img/minsu/15nanshe_2.jpg','./img/minsu/15nanshe_3.jpg',true,true,false,true,false,true);
 
+insert into Reserve values(null,'2020-11-26','2020-11-27',1,'一二三',false);
+insert into Reserve values(null,'2020-11-26','2020-11-27',1,'一二三',false);
+insert into Reserve values(null,'2020-11-26','2020-11-27',1,'一二三',false);
+insert into Reserve values(null,'2020-11-26','2020-11-27',1,'一二三',false);
+insert into Reserve values(null,'2020-11-26','2020-11-27',1,'一二三',false);
+insert into Reserve values(null,'2020-11-26','2020-11-27',1,'一二三',false);
+insert into Reserve values(null,'2020-11-26','2020-11-27',1,'一二三',false);
+insert into Reserve values(null,'2020-11-26','2020-11-27',1,'一二三',false);
 /*----------------------------
 ----------美食————KH----------
 ----------------------------*/
