@@ -61,7 +61,6 @@ create table user(
 	password varchar(255), unique key(username)
 ) engine=innodb;/*密码*/
 
-insert into user(username,phone, password) values('zhangyuan','12345678910','456'),('kanghui', '12345678911','234');
 /*#订单表*/
 create table dingdan(
 dd_id int primary key auto_increment  ,/*订单id 自增 不为空 主键*/
