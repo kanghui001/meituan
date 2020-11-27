@@ -48,5 +48,23 @@ res.send({code:200,msg:'login success'})
 });
 	
 });
+//模糊查询
+r.get('/search/:mingcheng',(req,res)=>{
+	res.send("你好")
+	var _mingcheng=req.params.minghceng;
+	//三表联和再根据条件查询
+	var sql=`select * from dingdan inner join 
+	shopping on dingdan.dd_id=shopping.aid 
+	inner join enterment on shopping_id=enterment.kid 
+	where mo_name link '%${_mingcheng}%'; `
+	pool.query(sql,(err,result)=>{
+		if(err) throw err;
+		if(result.length>0){
+			res.send(result)
+			}else{
+			res.send("0")
+		}
+	})
+})
 
 module.exports=r;
