@@ -53,6 +53,24 @@ r.get('/flight/:aid', (req,res) => {
 	});
 })
 
+//根据用户选择检索具体航线信息
+r.get('/flight/:startPos&:endPos&:flyDate', (req,res) => {
+	var _startPos = req.params.startPos;
+	var _endPos = req.params.endPos;
+	var _flyDate = req.params.flyDate;
+	var sql = 'select * from flight where startPos=? and endPos=? and flyDate=?';
+	pool.query(sql, [_startPos, _endPos, _flyDate], (err, data) => {
+		if (err) throw err;
+		console.log(data);
+		if (data.length > 0){
+		    res.send(data);
+		}
+		else{
+		    res.send('false');
+		};
+	});
+})
+
 //插入机票信息
 r.post('/reg', (req,res) => {
     var _obj = JSON.parse(req.body.obj);
