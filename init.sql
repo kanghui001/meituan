@@ -77,27 +77,27 @@ foreign key(dd_id) references user(id)/*设置外键和user表相关联*/
 ----------------------------*/
 
 create table minsu(
-	mnid int primary key auto_increment,
-	mname varchar(16) not null,
-	salary decimal(6,2),   #9999.99
-	intro varchar(100),
-	mtype varchar(50) not null,
-	promotion varchar(100),
-	mhost varchar(20) not null,
-	location varchar(30) not null,
-	rating decimal(2,1),
-	reviews varchar(200),
-	amenities varchar(100) not null,
-	notice varchar(100),
-	Fimg varchar(40),
-	Simg varchar(40),
-	Timg varchar(40),
-	anxinzhu boolean,
-	yixiaodu boolean,
-	jinditie boolean,
-	Iflist boolean,
-	Ifbrand boolean,
-	IfLDA boolean
+	mnid int primary key auto_increment,         /*民宿*/
+	mname varchar(16) not null,                  /*民宿名称*/
+	salary decimal(6,2),   #9999.99              /*价格*/
+	intro varchar(100),                          /*简介*/
+	mtype varchar(50) not null,                  /*房间类型*/
+	promotion varchar(100),                      /*促销*/
+	mhost varchar(20) not null,                  /*房东*/
+	location varchar(30) not null,               /*位置*/
+	rating decimal(2,1),                         /*评星*/
+	reviews varchar(200),                        /*评价*/
+	amenities varchar(100) not null,             /*设施服务*/
+	notice varchar(100),                         /*预订须知*/
+	Fimg varchar(40),                            /*图片*/
+	Simg varchar(40),                            /*图片*/
+	Timg varchar(40),                            /*图片*/
+	anxinzhu boolean,                            /*安心住*/
+	yixiaodu boolean,                            /*已消毒*/
+	jinditie boolean,                            /*近地铁*/
+	Iflist boolean,                              /*主题精选*/
+	Ifbrand boolean,                             /*品牌民宿*/
+	IfLDA boolean                                /*热门入住地*/
 );
 create table Reserve(	
   pid int primary key auto_increment,   /*订单*/
@@ -106,6 +106,9 @@ create table Reserve(
 	pcount int,              /*入住人数*/
 	name varchar(10),            /*姓名*/
 	insurance boolean,        /*是否购买保险*/
+	pledge decimal(4,2),       /*押金*/
+	discounts decimal(4,2),      /*优惠*/
+	cleanfee  decimal(4,2),     /*清洁费*/
 	foreign key(pid) references minsu(mnid)
 );
 
