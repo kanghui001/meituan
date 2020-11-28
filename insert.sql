@@ -77,9 +77,17 @@ insert into Reserve values(null,'2020-11-26','2020-11-27',1,'一二三',false);
 insert into Reserve values(null,'2020-11-26','2020-11-27',1,'一二三',false);
 insert into Reserve values(null,'2020-11-26','2020-11-27',1,'一二三',false);
 insert into Reserve values(null,'2020-11-26','2020-11-27',1,'一二三',false);
+
 /*----------------------------
 ----------美食————KH----------
 ----------------------------*/
+
+insert into coment values(1,"单人餐,提供免费wifi","已售4970","¥127","门店价¥145");
+insert into coment values(2,"双人餐,提供免费wifi","已售4970","¥247","门店价¥789");
+insert into coment values(3,"3-4人餐,提供免费wifi","已售4970","¥527","门店价¥456");
+insert into coment values(4,"5-6人餐,提供免费wifi","已售4970","¥607","门店价¥15");
+insert into coment values(5,"7-8人餐,提供免费wifi","已售4970","¥800","门店价¥185");
+insert into coment values(6,"9-10人餐,提供免费wifi","已售2428","¥10007","门店价¥65");
 
 insert into shopping values(null,'img/food/1.jpg','牛水煮·功夫水煮牛肉（大悦城店）','4.3分','14条评论','雁塔区慈恩路西安大悦城B1层','人均¥50' );
 insert into shopping values(null,'img/food/2.jpg','云贵过桥米线（车城花园店）','5分','6691条评论','高陵区车城花园东门南50米西安银行隔壁','人均¥15' );

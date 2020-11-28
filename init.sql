@@ -113,6 +113,15 @@ create table Reserve(
 ----------美食————KH----------
 ----------------------------*/
 
+#创建商品分类表
+create table coment(
+	cid int primary key,
+	set_meal	varchar(128),  					#套餐
+	sold	varchar(128),								#已售
+	price	varchar(128),							  #价格
+	store_price	varchar(128)				  #门店价格
+);
+
 create table shopping (
 	aid int primary key auto_increment,
 	sm_img varchar(128),			 				#商品图片
