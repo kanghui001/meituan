@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;margin: 0;
+			}
+			.lunbo{
+				text-align: center;
+				margin-top: -13px;
+			}
+			.tou{
+				border: 0;
+			  overflow: auto;
+			}
+			.wei{
+				border: 0;
+				overflow: auto;
+				margin-top: 50px;
+			}
+			
+			#list{
+				margin-top: 30px;
+				width: 750px;
+				margin-left: 370px;
+			}
+			.biaoti{
+				display: block;
+				font-size: 26px;
+				color: #ef4238;
+				margin-bottom: 20px;
+			}
+			.goupiao{
+				display: block;
+				width: 160px;height: 40px;
+				text-align: center;
+				line-height: 40px;
+				border: 1px solid lavender;
+			}
+			.goupiao>a{
+				font-size: 15px;
+				display: block;
+				width: 160px;height: 40px;
+				color:#ef4238 ;
+				text-decoration: none;
+			}
+			.goupiao>a:hover{
+				color: white;
+				background-color:#ef4238 ;
+			}
+			.pict{
+				display: block;
+			}
+			.mv{
+				display: inline-block;
+			}
+			.mv1{
+				display: inline-block;
+				margin-left: 20px;
+			}
+			.mv2{
+				margin-top: 30px;
+			}
+			.mv3{
+				display: inline-block;
+				margin-top: 30px;
+			}
+			#desc{
+				width: 360px;
+				list-style: none;
+				float: right;
+				margin-top: -1930px;
+				margin-right: -450px;
+				font-family: helvetica;
+			}
+			.desc1>ul{
+				list-style: none;
+			}
+			.span1{
+				display: block;
+				list-style: none;
+				margin-top: -75px;
+				margin-right:10px ;
+			}
+			.span1>a{
+				display: block;
+				text-decoration: none;
+				color: #333;
+				margin-left: 130px;
+				font-size: 18px;
+			} 
+			.span2{
+				display:block;
+				margin-top: 20px;
+				margin-left: 130px;
+				color:#ef4238 ;
+			}
+			.li1{
+				border: 1px solid #efefef;
+				height: 79px;
+			}
+			.li1:hover{
+				background-color: #efefef
+			}
+			.li2 a{
+				text-decoration: none;
+				color: #333;
+			}
+			.li2:hover{
+				background-color: #f7f7f7;
+			}
+			.span3{
+				height: 35px;width: 360px;
+				line-height: 35px;
+				margin-top: 25px;
+			}
+			.price{
+				float: right;
+				color: #ef4238;
+			}
+			.xuhao{
+				font-size: 19px;
+				color:#ef4238 ;
+				font-family:"times new roman";
+			}
+			.biaoti1{
+				display: block;
+				font-size: 26px;
+				color: #2d98f3;
+				margin-top: 50px;
+				margin-bottom: 20px;
+			}
+			.zhong_mv{
+				display: inline-block;
+				width: 160px;height: 293px;
+			}
+			.shou:hover{
+				box-shadow: 0px 10px 5px 0px #efefef;
+			}
+			.shou{
+				border: 1px solid #efefef;
+				font-size: 14px;
+				color: #999;
+			}
+			.shou>span{
+				display: inline-block;
+				text-align: center;
+				line-height: 36px;
+				background-color: #fbfbfb;
+			}
+			.xiangkan{
+				height: 36px;width: 160px;
+				color:  #ffb400 !important;
+			}
+			.xiabiao{
+				border-left: 1px solid #efefef;
+				width: 75px;height: 39px;
+				background-color: #fbfbfb;
+				display: inline-block;
+			}
+			.ying{
+				display: block;
+				width: 160px;height: 34px;
+				text-align: center;
+				line-height: 34px;
+				font-size: 14px;
+				color: #999;
+			}
+			.zhong{
+				margin-left: 22px;
+			}
+			.xia{
+				margin-top: 20px;
+			}
+			.style{
+			  list-style: none;
+				display: inline-block;
+				margin-top: 30px;
+				margin-left: -20px;
+			}
+			.style>li{
+				display: inline-block;
+				margin-left: 20px;
+			}
+			.style>li>a{
+				text-decoration: none;
+				font-size: 14px;
+				color: #333;
+			}
+				.style>li>a:hover{
+					color:#ef4238 ;
+				}
+			.title{
+				color: white;
+				display: block;
+				margin-left: 10px;
+				margin-top: -35px;
+				font-size: 16px;
+			}	
+			.score{
+				display: block;
+				font-size: 18px;
+				color: #ffb400;
+				font-family: papyrus;
+				margin-top: -20px;
+				margin-left: 300px;
+			}
+			.gui{
+				display: inline-block;
+			}
+	    .ba{
+				display: inline-block;
+				margin-top: 30px;
+			} 
+		 .duo{
+			 display: inline-block;
+			 margin-left: 20px;
+		 }
+		 .score1{
+			 display: block;
+			 font-size: 18px;
+			 color: #ffb400;
+			 font-family: papyrus;
+			 margin-top: -20px;
+			 margin-left: 130px;
+			}
+		 .zui{
+			 margin-top: 50px;
+		 }
+		 .youzhong{
+			 float: right;
+			 height: 194px;width: 218px;
+			 border: 1px solid  #efefef;
+		 }
+		 .youzhong:hover{
+			 background-color: #efefef;
+		 }
+		
+		 .desc2>div{
+			 display: inline-block;
+		 }
+		 .desc2 div>span{
+			 margin-top: 10px;
+			 display: block;
+		 }
+		 .songni{
+			 font-size: 20px;
+			  padding-left: 10px;
+		 }
+		 .ying1{
+			 color: #999;
+			 padding-left: 10px;
+		 }
+		 .honghua{
+			 padding-left: 10px;
+		 }
+		 .mt:hover{
+			 background-color: #efefef;
+		 }
+		 .tr:hover{
+			 background-color: #efefef;
+		 }
+		 .tr{
+			 margin-top: 10px;
+			 border: 1px solid  #efefef;
+		 }
+		 .mt{
+			 margin-left: 10px;
+			 border: 1px solid  #efefef;
+		 }
+		 .top{
+			 margin-top: 100px;
+		 }
+		</style>
+	</head>
+	<body>
+		<iframe class="tou" src="mv_head.html" width="100%" height="90px"></iframe>
+		<div id="">
+			<div class="lunbo">
+				<img src="../img/moive/lunbo11.jpg" >
+			</div>
+			<div id="list">
+				<span class="biaoti">
+					正在热映（39部）
+				</span>
+				<div class="mv">
+				 <div id="">
+					<img class="pict" src="../img/moive/chuan.jpg" >
+					
+				 </div>
+				 <div class="goupiao">
+					<a href="">购票</a>
+				 </div>
+				</div>
+				<div class="mv1">
+				 <div id="">
+					<img class="pict" src="../img/moive/jiangziya.jpg" >
+				 </div>
+				 <div class="goupiao">
+					<a href="">购票</a>
+				 </div>
+				</div>
+				<div class="mv1">
+				 <div id="">
+					<img class="pict" src="../img/moive/jiaxiang.jpg" >
+				 </div>
+				 <div class="goupiao">
+					<a href="">购票</a>
+				 </div>
+				</div>
+				<div class="mv1">
+				 <div id="">
+					<img class="pict" src="../img/moive/duo.jpg" >
+				 </div>
+				 <div class="goupiao">
+					<a href="">购票</a>
+				 </div>
+				</div>
+				<div class="mv3">
+				 <div id="">
+					<img class="pict" src="../img/moive/ba.jpg" >
+				 </div>
+				 <div class="goupiao">
+					<a href="">购票</a>
+				 </div>
+				</div>
+				<div class="mv1">
+				 <div id="">
+					<img class="pict" src="../img/moive/guai.jpg" >
+				 </div>
+				 <div class="goupiao">
+					<a href="">购票</a>
+				 </div>
+				</div>
+				<div class="mv1">
+				 <div id="">
+					<img class="pict" src="../img/moive/feng.jpg" >
+				 </div>
+				 <div class="goupiao">
+					<a href="">购票</a>
+				 </div>
+				</div>
+				<div class="mv1">
+				 <div id="">
+					<img class="pict" src="../img/moive/chubao.jpg" >
+				 </div>
+				 <div class="goupiao">
+					<a href="">购票</a>
+				 </div>
+				</div>
+				<span class="biaoti1">
+					即将上映（65部）
+				</span>
+				<div class="zhong_mv">
+					<div>
+					<a href="#"><img class="pict" src="../img/moive/yu_zhiwang.jpg" ></a>
+				  </div>
+				  <div class="shou">
+					<span class="xiangkan">1683人想看</span>
+					<span class="xiabiao">预告片</span>	
+					<span class="xiabiao">预售</span>
+					</div>
+				  <span class="ying">12月8日上映</span>
+				</div>
+				<div  class="zhong_mv zhong">
+					<div class="s">
+					<a href="#"><img class="pict" src="../img/moive/yu_48.jpg" ></a>
+				  </div>
+				  <div class="shou">
+					<span class="xiangkan">1687人想看</span>
+					<span class="xiabiao">预告片</span>	
+					<span class="xiabiao">预售</span>
+					</div>
+				  <span class="ying">12月8日上映</span>
+				</div>
+				<div  class="zhong_mv zhong">
+					<div class="s">
+					<a href="#"><img class="pict" src="../img/moive/yu_gaoshou.jpg" ></a>
+				  </div>
+				  <div class="shou">
+					<span class="xiangkan">19870人想看</span>
+					<span class="xiabiao">预告片</span>	
+					<span class="xiabiao">预售</span>
+					</div>
+				  <span class="ying">12月8日上映</span>
+				</div>
+				<div  class="zhong_mv zhong">
+					<div class="s">
+					<a href="#"><img class="pict" src="../img/moive/yu_jiqimao.jpg" ></a>
+				  </div>
+				  <div class="shou">
+					<span class="xiangkan">45686人想看</span>
+					<span class="xiabiao">预告片</span>	
+					<span class="xiabiao">预售</span>
+					</div>
+				  <span class="ying">12月8日上映</span>
+				</div>
+				<div class="zhong_mv xia">
+					<div>
+					<a href="#"><img class="pict" src="../img/moive/yu_leiren1.jpg" ></a>
+				  </div>
+				  <div class="shou">
+					<span class="xiangkan">1454人想看</span>
+					<span class="xiabiao">预告片</span>	
+					<span class="xiabiao">预售</span>
+					</div>
+				  <span class="ying">12月11日上映</span>
+				</div>
+				<div  class="zhong_mv zhong">
+					<div class="s">
+					<a href="#"><img class="pict" src="../img/moive/yu_shao.jpg" ></a>
+				  </div>
+				  <div class="shou">
+					<span class="xiangkan">1455人想看</span>
+					<span class="xiabiao">预告片</span>	
+					<span class="xiabiao">预售</span>
+					</div>
+				  <span class="ying">12月11日上映</span>
+				</div>
+				<div  class="zhong_mv zhong">
+					<div class="s">
+					<a href="#"><img class="pict" src="../img/moive/yu_shaonian.jpg" ></a>
+				  </div>
+				  <div class="shou">
+					<span class="xiangkan">7887人想看</span>
+					<span class="xiabiao">预告片</span>	
+					<span class="xiabiao">预售</span>
+					</div>
+				  <span class="ying">12月11日上映</span>
+				</div>
+				<div  class="zhong_mv zhong ">
+					<div class="s">
+					<a href="#"><img class="pict" src="../img/moive/yu_shenjian.jpg" ></a>
+				  </div>
+				  <div class="shou">
+					<span class="xiangkan">6345人想看</span>
+					<span class="xiabiao">预告片</span>	
+					<span class="xiabiao">预售</span>
+					</div>
+				  <span class="ying">12月11日上映</span>
+				</div>
+				<div class="rb">
+					<ul class="style">
+						<li><span class="biaoti">热播电影</span></li>
+						<li><a href="#">爱情</a></li>
+						<li><a href="#">喜剧</a></li>
+						<li><a href="#">动作</a></li>
+						<li><a href="#">恐怖</a></li>
+						<li><a href="#">动画</a></li>
+					</ul>
+					<div class="rbdy">
+					 <div class="gui">
+						<img src="../img/moive/ligui.jpg" >
+						<span class="title">厉鬼将映</span>
+						<span class="score">7.1</span>
+					 </div>
+					 <div class="duo">
+					 	<img src="../img/moive/duo.jpg" >
+					 	<span class="title">夺冠</span>
+					 	<span class="score1">8.3</span>
+					 </div>
+					 <div class="duo">
+					 	<img src="../img/moive/guai.jpg" >
+					 	<span class="title">怪物猎人</span>
+					 	<span class="score1">7.8</span>
+					 </div>
+					 <div class="ba">
+						<img src="../img/moive/kuiba.jpg" >
+						<span class="title">魁拔Ⅲ战神崛起</span>
+						<span class="score">9.1</span>
+					 </div>
+					 <div class="duo">
+					 	<img src="../img/moive/jiaxiang.jpg" >
+					 	<span class="title">我和我的家乡</span>
+					 	<span class="score1">7.7</span>
+					 </div>
+					 <div class="duo">
+					 	<img src="../img/moive/jiangziya.jpg" >
+					 	<span class="title">姜子牙</span>
+					 	<span class="score1">8.7</span>
+					 </div>
+				</div>
+			</div>
+		  <div id="desc">
+				<div class="desc1">
+		  		<ul>
+		  			<li><span class="biaoti">今日票房</span></li>
+		  			<li class="li1">
+							<img src="../img/moive/xiao.jpg" >
+							<span class="span1"><a href="#">孤狐书生</a></span>
+							<span class="span2">2168.48万</span>
+						</li>	
+		  			<li class="li2">
+							<div class="span3">
+							<span class="xuhao">2.</span>
+		  				<span class="piaofang"><a href="#">如果声音不记得</a></span>
+		  				<span class="price">1950.54万</span>
+							</div>
+						</li>  	
+						<li class="li2">
+							<div class="span3">
+							<span class="xuhao">3.</span>
+							<span class="piaofang"><a href="#">怪物猎人</a></span>
+							<span class="price">1130万</span>
+							</div>
+						</li>  		
+		  			<li class="li2">
+		  				<div class="span3">
+		  				<span class="xuhao">4.</span>
+		  				<span class="piaofang"><a href="#">疯狂原始人</a></span>
+		  				<span class="price">99.78万</span>
+		  				</div>
+		  			</li>
+						<li class="li2">
+							<div class="span3">
+							<span class="xuhao">5.</span>
+							<span class="piaofang"><a href="#">宝可梦：超梦的逆袭 进化</a></span>
+							<span class="price">76.30万</span>
+							</div>
+						</li>  			
+		  		</ul>
+		  	</div>
+				<div class="desc2">
+					<span class="biaoti zui">最受期待</span>
+					<div >
+						<img src="../img/moive/xiaohonghua5.jpg" >
+					</div>
+					<div class="youzhong">
+						<span class="songni">送你一朵小红花</span>
+						<span class="ying1">上映时间：2020-12-31</span>
+						<span class="xiangkan honghua">30655人想看</span>
+					</div>
+					<div class="tr">
+						<img src="../img/moive/11.jpg" >
+						<span class="songni">唐人街探案</span>
+						<span class="xiangkan honghua">130655人想看</span>
+					</div>
+					<div class="mt">
+						<img src="../img/moive/22.jpg" >
+						<span class="songni">明天你是否...</span>
+						<span class="xiangkan honghua">38774人想看</span>
+					</div>
+				</div>
+				<div class="desc1">
+					<div class="desc1">
+						<ul>
+							<li class="li2">
+								<div class="span3">
+								<span class="xuhao">4.</span>
+								<span class="piaofang"><a href="#">晴雅集</a></span>
+								<span class="price">30655人想看</span>
+								</div>
+							</li>  	
+							<li class="li2">
+								<div class="span3">
+								<span class="xuhao">5.</span>
+								<span class="piaofang"><a href="#">温暖的抱抱</a></span>
+								<span class="price">45664人想看</span>
+								</div>
+							</li>  		
+							<li class="li2">
+								<div class="span3">
+								<span class="xuhao">6.</span>
+								<span class="piaofang"><a href="#">你好，李焕英</a></span>
+								<span class="price">56445人想看</span>
+								</div>
+							</li>
+							<li class="li2">
+								<div class="span3">
+								<span class="xuhao">7.</span>
+								<span class="piaofang"><a href="#">神奇女侠1984</a></span>
+								<span class="price">98766人想看</span>
+								</div>
+							</li>
+							<li class="li2">
+								<div class="span3">
+								<span class="xuhao">8.</span>
+								<span class="piaofang"><a href="#">哆啦A梦：大雄的新恐龙</a></span>
+								<span class="price">45552人想看</span>
+								</div>
+							</li>	
+							<li class="li2">
+								<div class="span3">
+								<span class="xuhao">9.</span>
+								<span class="piaofang"><a href="#">沐浴之王</a></span>
+								<span class="price">98555人想看</span>
+								</div>
+							</li>
+							<li class="li2">
+								<div class="span3">
+								<span class="xuhao">10.</span>
+								<span class="piaofang"><a href="#">拆弹专家2</a></span>
+								<span class="price">99884人想看</span>
+								</div>
+							</li>			
+						</ul>
+					</div>
+				</div>
+		    <div class="desc1 top">
+		    	<ul>
+		    		<li><span class="biaoti">TOP 100</span></li>
+		    		<li class="li1">
+		    			<img src="../img/moive/333.jpg">
+		    			<span class="span1"><a href="#">我不是药神</a></span>
+		    			<span class="span2">9.5分</span>
+		    		</li>	
+		    		<li class="li2">
+		    			<div class="span3">
+		    			<span class="xuhao">2.</span>
+		    			<span class="piaofang"><a href="#">肖申克的救赎</a></span>
+		    			<span class="price">9.5分</span>
+		    			</div>
+		    		</li>  	
+		    		<li class="li2">
+		    			<div class="span3">
+		    			<span class="xuhao">3.</span>
+		    			<span class="piaofang"><a href="#">绿皮书</a></span>
+		    			<span class="price">9.6分</span>
+		    			</div>
+		    		</li>  		
+		    		<li class="li2">
+		    			<div class="span3">
+		    			<span class="xuhao">4.</span>
+		    			<span class="piaofang"><a href="#">海上钢琴师</a></span>
+		    			<span class="price">8.8分</span>
+		    			</div>
+		    		</li>
+		    		<li class="li2">
+		    			<div class="span3">
+		    			<span class="xuhao">5.</span>
+		    			<span class="piaofang"><a href="#">小偷家族</a></span>
+		    			<span class="price">8.6分</span>
+		    			</div>
+		    		</li> 
+						<li class="li2">
+							<div class="span3">
+							<span class="xuhao">5.</span>
+							<span class="piaofang"><a href="#">霸王别姬</a></span>
+							<span class="price">9.0分</span>
+							</div>
+						</li>
+						<li class="li2">
+							<div class="span3">
+							<span class="xuhao">5.</span>
+							<span class="piaofang"><a href="#">美丽人生</a></span>
+							<span class="price">9.4分</span>
+							</div>
+						</li>
+					</ul>
+		    </div>
+			</div>
+		</div>
+		<iframe class="wei" src="mv_foot.html" width="100%" height="500px"></iframe>
+	</body>
+</html>
