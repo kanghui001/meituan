@@ -4,7 +4,9 @@
 		<title>Document</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<link rel="stylesheet" href="../css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="../css/flight.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/flight.css" />
+		<link rel="stylesheet" type="text/css" href="../css/header.css" />
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
 		<script src="../js/jquery.min.js"></script>
 		<script src="../js/popper.min.js"></script>
 		<script src="../js/bootstrap.min.js"></script>
@@ -14,16 +16,16 @@
 			<div id="header-bar" class="container-fluid">
 				<div id="barbody" class="header-content clearfix">
 					<div class="header-bar-position">
-						<img src="../img/air/header-img.png" >
+						<img src="../img/air/header-img.png">
 						<span class="city">
 							北京
 						</span>
 						<a href="#" class="change-city">切换城市</a>
 						<div class="inline">
 							[
-								<a href="#" class="city-guess">xxx</a>
-								<a href="#" class="city-guess">xxx</a>
-								<a href="#" class="city-guess">xxx</a>
+							<a href="#" class="city-guess">xxx</a>
+							<a href="#" class="city-guess">xxx</a>
+							<a href="#" class="city-guess">xxx</a>
 							]
 						</div>
 						<div id="user-entry" class="inline">
@@ -104,8 +106,1478 @@
 					</div>
 				</div>
 			</div>
-			<div class="header-content">
-				
+			<div class="header-content bg-white">
+				<div class="header-title">
+					<div class="header-title-img">
+						<a href="#">
+							<img src="../img/air/logo.png">
+						</a>
+					</div>
+				</div>
+				<div class="header-search">
+					<div class="header-search-main">
+						<input type="text" placeholder="搜索商家或地点" />
+						<button type="button">
+							<span class="iconfont icon-sousuo">
+							</span>
+						</button>
+					</div>
+					<div class="header-search-find">
+						<div class="header-search-noinput">
+							<h6>最近搜索</h6>
+							<span class="header-search-clean">删除历史记录</span>
+							<ul>
+								<li><a href="#">xxxxx</a></li>
+							</ul>
+						</div>
+						<div class="header-search-hasinput">
+
+						</div>
+					</div>
+					<div class="header-search-hot">
+						<a href="#">xxx</a>
+						<a href="#">xxx</a>
+						<a href="#">xxx</a>
+						<a href="#">xxx</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="top-container">
+			<div class="top clearfix">
+				<form id="search-form" class="search-formlabel">
+					<div class="inner">
+						<div class="tab">
+							<div class="tab-item selected">
+								国内机票
+							</div>
+							<div class="tab-item">
+								国际/港澳台机票
+							</div>
+						</div>
+						<div class="search-type form-item">
+							<label class="form-item-label">
+								航程类型
+							</label>
+							<div class="form-item-content">
+								<div class="form-item-checkbox">
+									<label class="form-checkbox-label">
+										<div class="checkbox-radio checked">
+											<span class="iconfont icon-payment">
+
+											</span>
+										</div>
+										单程
+									</label>
+									<label class="form-checkbox-label">
+										<div class="checkbox-radio checked">
+											<span class="iconfont icon-xuanze">
+
+											</span>
+										</div>
+										往返
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="form-warp clearfix">
+							<div class="form-cites">
+								<div class="form-item">
+									<label class="form-item-label">
+										出发城市
+									</label>
+									<div class="form-item-content">
+										<div class="city-picker">
+											<div class="picker-input">
+												<input type="text" name="" id="" value="" />
+											</div>
+											<ul class="picker-body" style="display: none;">
+												<li>xxx</li>
+												<li>xxx</li>
+											</ul>
+											<div class="picker-body" style="display: none;">
+												<div class="picker-hint">
+													<span class="float-left">
+														热门城市（可直接输入中文名/拼音/英文名）
+													</span>
+													<span class="float-right picker-hint-close">
+														×
+													</span>
+												</div>
+												<div class="picker-content">
+													<div class="picker-tab">
+														<div class="picker-tab-header">
+															境外
+														</div>
+														<div class="picker-tab-item picker-tab-item-clicked">
+															aomen
+														</div>
+														<div class="picker-tab-item">
+															aomen
+														</div>
+													</div>
+													<div class="picker-city">
+														<div class="picker-city-item">
+															tokyo
+														</div>
+														<div class="picker-city-item">
+															tokyo
+														</div>
+														<div class="picker-city-item">
+															tokyo
+														</div>
+														<div class="picker-city-item">
+															tokyo
+														</div>
+														<div class="picker-city-item">
+															tokyo
+														</div>
+													</div>
+												</div>
+												<div class="picker-content">
+													<div class="picker-tab">
+														<div class="picker-tab-header">
+															境外
+														</div>
+														<div class="picker-tab-item">
+															aomen
+														</div>
+														<div class="picker-tab-item">
+															aomen
+														</div>
+													</div>
+													<div class="picker-city">
+														<div class="picker-city-item">
+															tokyo
+														</div>
+														<div class="picker-city-item">
+															tokyo
+														</div>
+														<div class="picker-city-item">
+															tokyo
+														</div>
+														<div class="picker-city-item">
+															tokyo
+														</div>
+														<div class="picker-city-item">
+															tokyo
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="cites-change">
+									<span class="iconfont icon-iconfontzhizuobiaozhun35">
+										
+									</span>
+								</div>
+								<div class="form-item">
+									<label class="form-item-label">
+										到达城市
+									</label>
+									<div class="form-item-content">
+										<div class="city-picker">
+											<div class="picker-input">
+												<input type="text" name="" id="" value="" />
+											</div>
+											<ul class="picker-body" style="display: none;">
+												<li>xxx</li>
+												<li>xxx</li>
+											</ul>
+											<div class="picker-body" style="display: none;">
+												<div class="picker-hint">
+													<span class="float-left">
+														热门城市（可直接输入中文名/拼音/英文名）
+													</span>
+													<span class="float-right picker-hint-close">
+														×
+													</span>
+												</div>
+												<div class="picker-content">
+													<div class="picker-tab">
+														<div class="picker-tab-header">
+															境外
+														</div>
+														<div class="picker-tab-item picker-tab-item-clicked">
+															aomen
+														</div>
+														<div class="picker-tab-item">
+															aomen
+														</div>
+													</div>
+													<div class="picker-city">
+														<div class="picker-city-item">
+															tokyo
+														</div>
+														<div class="picker-city-item">
+															tokyo
+														</div>
+														<div class="picker-city-item">
+															tokyo
+														</div>
+														<div class="picker-city-item">
+															tokyo
+														</div>
+														<div class="picker-city-item">
+															tokyo
+														</div>
+													</div>
+												</div>
+												<div class="picker-content">
+													<div class="picker-tab">
+														<div class="picker-tab-header">
+															境外
+														</div>
+														<div class="picker-tab-item">
+															aomen
+														</div>
+														<div class="picker-tab-item">
+															aomen
+														</div>
+													</div>
+													<div class="picker-city">
+														<div class="picker-city-item">
+															tokyo
+														</div>
+														<div class="picker-city-item">
+															tokyo
+														</div>
+														<div class="picker-city-item">
+															tokyo
+														</div>
+														<div class="picker-city-item">
+															tokyo
+														</div>
+														<div class="picker-city-item">
+															tokyo
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-dates">
+								<div class="dates">
+									<div class="form-item">
+										<label class="form-item-label">
+											去程时间
+										</label>
+										<div class="form-item-content">
+											<div class="dp-container">
+												<div class="bordered">
+													<input type="text" class="dp-input" />
+													<span class="weekinfo"></span>
+												</div>
+												<div class="t-calendar">
+													<a href="#" class="prev">
+														<div class="a">
+														</div>
+														<div class="b">
+														</div>
+													</a>
+													<div class="left-wrapper">
+														2020年12月
+													</div>
+													<div class="right-wrapper">
+														2021年1月
+													</div>
+													<a href="#" class="next">
+														<div class="a">
+														</div>
+														<div class="b">
+														</div>
+													</a>
+													<div class="left-month">
+														<div class="month-head clearfix">
+															<div class="week-font week-rest">
+																日
+															</div>
+															<div class="week-font week-rest">
+																日
+															</div>
+															<div class="week-font week-rest">
+																日
+															</div>
+															<div class="week-font week-rest">
+																日
+															</div>
+															<div class="week-font week-rest">
+																日
+															</div>
+															<div class="week-font week-rest">
+																日
+															</div>
+															<div class="week-font week-rest">
+																日
+															</div>
+														</div>
+														<div class="month-body clearfix">
+															<div class="date selectable" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="right-month">
+														<div class="month-head clearfix">
+															<div class="week-font">
+																日
+															</div>
+															<div class="week-font">
+																日
+															</div>
+															<div class="week-font">
+																日
+															</div>
+															<div class="week-font">
+																日
+															</div>
+															<div class="week-font">
+																日
+															</div>
+															<div class="week-font">
+																日
+															</div>
+															<div class="week-font">
+																日
+															</div>
+														</div>
+														<div class="month-body clearfix">
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+															<div class="date" data-day="" data-month="12" data-year="2020">
+																<div class="date-font">
+																	
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="dates">
+								<div class="form-item">
+									<label class="form-item-label">
+										返程时间
+									</label>
+									<div class="form-item-content">
+										<div class="dp-container">
+											<div class="bordered">
+												<input type="text" class="dp-input" />
+												<span class="weekinfo"></span>
+											</div>
+											<div class="t-calendar">
+												<a href="#" class="prev">
+													<div class="a">
+													</div>
+													<div class="b">
+													</div>
+												</a>
+												<div class="left-wrapper">
+													2020年12月
+												</div>
+												<div class="right-wrapper">
+													2021年1月
+												</div>
+												<a href="#" class="next">
+													<div class="a">
+													</div>
+													<div class="b">
+													</div>
+												</a>
+												<div class="left-month">
+													<div class="month-head clearfix">
+														<div class="week-font week-rest">
+															日
+														</div>
+														<div class="week-font week-rest">
+															日
+														</div>
+														<div class="week-font week-rest">
+															日
+														</div>
+														<div class="week-font week-rest">
+															日
+														</div>
+														<div class="week-font week-rest">
+															日
+														</div>
+														<div class="week-font week-rest">
+															日
+														</div>
+														<div class="week-font week-rest">
+															日
+														</div>
+													</div>
+													<div class="month-body clearfix">
+														<div class="date selectable" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="right-month">
+													<div class="month-head clearfix">
+														<div class="week-font">
+															日
+														</div>
+														<div class="week-font">
+															日
+														</div>
+														<div class="week-font">
+															日
+														</div>
+														<div class="week-font">
+															日
+														</div>
+														<div class="week-font">
+															日
+														</div>
+														<div class="week-font">
+															日
+														</div>
+														<div class="week-font">
+															日
+														</div>
+													</div>
+													<div class="month-body clearfix">
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+														<div class="date" data-day="" data-month="12" data-year="2020">
+															<div class="date-font">
+																
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+								<button type="button" class="btn select-btn" href="#">
+									<span>
+										搜索
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</form>
+				<div class="banner">
+					<div class="banner-swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-content">
+								<img src="../img/air/guanggao.jpg" >
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="history">
+			<span class="history-name">历史查询：</span>
+			<a href="#">
+				<span class="history-content">单程</span>
+				<span class="history-content">西宁-上海</span>
+				<span class="remove">×</span>
+			</a>
+			<a href="#">
+				<span class="history-content">单程</span>
+				<span class="history-content">西宁-上海</span>
+				<span class="remove">×</span>
+			</a>
+		</div>
+		<div class="recommend">
+			<div class="recommend-header">
+				<span class="recommend-header-name">优选目的地</span>
+				<a href="#" class="recommend-header-kind selected">海浪沙滩</a>
+				<a href="#" class="recommend-header-kind">海浪沙滩</a>
+			</div>
+			<div class="recommend-content">
+				<div class="recommend-content-swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-content">
+							<div class="swiper-slide">
+								<div class="swiper-item">
+									<div class="item-space">
+										<img src="../img/air/summer_SYX.jpg" >
+										<div class="swiper-item-info">
+											<h3><a href="#">西安-北京</a></h3>
+											<div class="swiper-item-price">
+												<span>¥</span>380
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-item">
+									<div class="item-space">
+										<img src="../img/air/summer_SYX.jpg" >
+										<div class="swiper-item-info">
+											<h3><a href="#">西安-北京</a></h3>
+											<div class="swiper-item-price">
+												<span>¥</span>380
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-item">
+									<div class="item-space">
+										<img src="../img/air/summer_SYX.jpg" >
+										<div class="swiper-item-info">
+											<h3><a href="#">西安-北京</a></h3>
+											<div class="swiper-item-price">
+												<span>¥</span>380
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-item">
+									<div class="item-space">
+										<img src="../img/air/summer_SYX.jpg" >
+										<div class="swiper-item-info">
+											<h3><a href="#">西安-北京</a></h3>
+											<div class="swiper-item-price">
+												<span>¥</span>380
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="swiper-item">
+									<div class="item-space">
+										<img src="../img/air/summer_SYX.jpg" >
+										<div class="swiper-item-info">
+											<h3><a href="#">西安-北京</a></h3>
+											<div class="swiper-item-price">
+												<span>¥</span>380
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="swiper-item">
+									<div class="item-space">
+										<img src="../img/air/summer_SYX.jpg" >
+										<div class="swiper-item-info">
+											<h3><a href="#">西安-北京</a></h3>
+											<div class="swiper-item-price">
+												<span>¥</span>380
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-pagination">
+							<span class="point selected"></span>
+							<span class="point"></span>
+							<span class="point"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bargain">
+			<div class="bargain-header">
+				<span class="bargain-header-name">特价推荐</span>
+				<a href="#" class="bargain-header-kind selected">单程</a>
+			</div>
+			<div class="bargain-content">
+				<div class="bargain-content-swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-content">
+							<div class="swiper-slide">
+								<div class="swiper-item">
+									<h3 class="ba clearfix">
+										<div>
+											西安
+										</div>
+										<span></span>
+										北京
+									</h3>
+									<div>
+										<div class="swiper-item-price">
+											<span>¥</span>380
+										</div>
+										<div class="swiper-item-date">
+											12月15日
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="swiper-item">
+									<h3 class="ba clearfix">
+										<div>
+											西安
+										</div>
+										<span></span>
+										北京
+									</h3>
+									<div>
+										<div class="swiper-item-price">
+											<span>¥</span>380
+										</div>
+										<div class="swiper-item-date">
+											12月15日
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="swiper-item">
+									<h3 class="ba clearfix">
+										<div>
+											西安
+										</div>
+										<span></span>
+										北京
+									</h3>
+									<div>
+										<div class="swiper-item-price">
+											<span>¥</span>380
+										</div>
+										<div class="swiper-item-date">
+											12月15日
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination">
+								<span class="point selected"></span>
+								<span class="point"></span>
+								<span class="point"></span>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</body>

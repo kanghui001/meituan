@@ -15,7 +15,7 @@ r.get('/travel', (req,res) => {
 		    res.send(data);
 		}
 		else{
-		    res.send('false');
+		    res.send('0');
 		};
 	});
 })
@@ -32,7 +32,7 @@ r.get('/airLine/:tid', (req,res) => {
 		    res.send(data);
 		}
 		else{
-		    res.send('false');
+		    res.send('0');
 		};
 	});
 })
@@ -48,7 +48,7 @@ r.get('/flight/:aid', (req,res) => {
 		    res.send(data);
 		}
 		else{
-		    res.send('false');
+		    res.send('0');
 		};
 	});
 })
@@ -66,7 +66,7 @@ r.get('/flight/:startPos&:endPos&:flyDate', (req,res) => {
 		    res.send(data);
 		}
 		else{
-		    res.send('false');
+		    res.send('0');
 		};
 	});
 })
