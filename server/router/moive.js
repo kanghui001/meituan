@@ -52,14 +52,16 @@ r.get('/showtick/:sid', (req,res) => {
 })
 //修改影厅的状态
 r.post("/update",(req,res)=>{
-		 var _seat=req.body;
-		 var sql="update seat set ? where seid=?"
-		 pool.query(sql,[_seat,_seat.seid],(err,result)=>{
-			 if(err) throw err;
-			 if(result.affectedRows>0){
-				 res.send("1")
-			 }else{
-			 	res.send("0")
-				}
-		 })
-	})
+	 var _seat=req.body;
+	 var sql="update seat set ? where seid=?"
+	 pool.query(sql,[_seat,_seat.seid],(err,result)=>{
+		 if(err) throw err;
+		 if(result.affectedRows>0){
+			res.send("1")
+		 }else{
+		 	res.send("0")
+		};
+	 });
+})
+
+module.exports = r;
