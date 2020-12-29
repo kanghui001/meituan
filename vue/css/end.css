@@ -1,0 +1,79 @@
+/* 清空内外边距 */
+*{margin: 0; padding: 0;}
+/* 大的div 给定长度 居中显示 并设置字体和颜色  */
+.footer{
+	margin: 0 auto 30px;
+	clear: both;
+	width: 980px;
+	font-size: 12px;
+	color: #999;
+}
+/* 上模块所在位置 上下边框显示 设置长度高度 */
+.site-info-nav{
+	margin-bottom: 20px;
+	padding: 12px 0 ;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	clear: both;
+	height: 24px;
+	width: 980px;
+}
+/* 无序排列 内容为左浮动*/
+.upul{
+	float: left;
+	width: 549px;
+	color: #eee;
+	height: 24px;
+	margin: 0;
+	padding: 0;
+}
+/* 浮动 左内边距为0  上下右外边 右边框  去除原点显示 高度 */
+.upulfirst{
+	padding-left: 0;
+	float: left;
+	margin: 5px 0;
+	padding: 0 16px;
+	line-height: 14px;
+	border-right: 1px solid #eee;
+	list-style: none;
+}
+/* 颜色 去除下划线 */
+.upula{
+	color: #999999;
+	text-decoration: none;
+}
+/* 左浮动 上下外边距 左右内边距 高度 右边框 取消原点显示 */
+.upulsecond{
+	float: left;
+	margin: 5px 0;
+	padding: 0 16px;
+	line-height: 14px;
+	border-right: 1px solid #eee;
+  list-style: none;
+}
+/* 去除右边框 */
+.upullast{
+	float: left;
+	margin: 5px 0;
+	padding: 0 16px;
+	line-height: 14px;
+	border-right: none;
+	list-style: none;
+}
+/* 下模块 左对齐 清楚浮动 字号 大小 高度 内外边距清零 左右内边距 */
+.copyright{
+	text-align:left;
+	clear: both;
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+	height: 18px;
+	width: 980px;
+	padding: 0 16px;
+}
+/* 下划线 字体颜色 大小 */
+.endspan{
+	text-decoration: none;
+	color: #999;
+	font-size: 12px;
+}

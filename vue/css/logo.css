@@ -1,0 +1,282 @@
+*{margin: 0;padding: 0;}
+/* 大的div背景颜色 */
+.login{
+	background: #fff;
+}
+/* 上模块 定长  块级元素 上左固定距离 左右自适应	 */
+.header{
+	width: 980px;
+	height: auto;
+	margin: 40px auto 30px;
+	display: block;
+	height: 47px;
+}
+/*背景图 设置大小 背景图片自适应大小  溢出部分隐藏 去除下划线  左浮动   */
+.d3{
+	background:url(../img/login/01.png) no-repeat;
+	width: 130px;
+	height: 47px;
+	background-size: contain;
+	background-position: 0;
+	overflow: hidden;
+	text-decoration: none;
+	text-indent: -99999px;
+	float: left;
+}
+/* 下模块 */
+.site-body{
+	margin: 0 ;
+	padding: 0;
+	display: block;
+	height: 370px;
+}
+/* 下模块中的div整体相对位置 */
+.content{
+	margin: 0 auto 70px;
+	width: 980px;
+	height: 370px;
+}
+/*整体div中左边div的位置  */
+.contentleft{
+	float: left;
+	height: 370px;
+	margin: 0 115px 0 0 ;
+	width: 480px;
+	display: block;
+}
+/*整体div中 右边div的位置   */
+.contentright{
+	float: left;
+	padding-top: 0;
+	margin: 0 auto;
+	width: 270px;
+	background: #fff;
+}
+/* 表单 */
+.contentrightform{
+	width: 270px;
+	margin: 0 0 10px;
+	position: relative;
+}
+/* 空div 挤 下面元素*/
+.null{
+	min-height: 18px;
+	margin-top: 0;
+	margin-bottom: 10px;
+	padding: 10px;
+	border: 1px solid fff;
+	border-radius: 2px;
+	background: transparent;
+}
+/* 字体大小颜色 */
+.account{
+	font-weight: 400;
+	color: #666;
+	font-size: 13px;
+	
+}
+/*相对定位右浮动 并设置颜色 带线啊哦 右内边距  */
+.phone{
+	position: relative;
+	padding-right: 16px;
+	color: #666;
+	float: right;
+	font-size: 12px;
+	text-decoration: none;
+}
+/* 手机号 密码位置的 弹性 */
+.surrond{
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0;
+	border: 1px solid #aaa;
+	margin: 15px 0;
+	display: flex;
+	align-items: center;
+	position: relative;
+	height: 34px;
+	width: 268px;	
+	background: none;
+	outline: none;
+	
+}
+ .surrond.phonenum :focus {
+ border:1px solid #FFc300;
+} 
+/* 手机框的大小 */
+.front{
+	width:39.67px ;
+	height: 25px;
+	text-decoration: none;
+	display: inline-block;
+	color: #646464;
+	text-align: center;
+}
+/* +86 */
+.d14{
+	
+	font-size:14px ;
+	color:#646464 ;
+}
+/* input  手机号 密码 框的相关设置 */
+.phonenum{
+	width: 180px;
+	padding-left: 5px;
+	border: none;
+	height: 22px;
+	padding: 5px;
+	outline: none;
+}
+
+/* .d16{
+	box-sizing: border-box;
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	color: #646464;
+} */
+/* +86后的大于号 */
+/* .d17{
+	width: 5px;
+	height: 5px;
+	border-right: 1px solid #646464;
+	border-top: 1px solid #646464;
+	transform: rotate(45deg);
+	margin-right: 4px;
+	position: relative;
+	bottom: 2px;
+} */
+/*锁子图标的位置和大小 */
+.logo{
+	width: 18px;
+	height: 18px;
+	background-image: url(../img/login/下载.png) ;
+	background-position: -1250px -527px;
+	position: absolute;
+	display: inline-block;
+	vertical-align: text-top;
+	margin-left: 8px;
+	margin-top: 3px;
+}
+/* 调整密码输入框的位置 */
+
+.pwd{
+	width: 180px;
+	padding-left: 5px;
+	border: none;
+	height: 22px;
+	padding: 5px;
+	outline: none;
+	padding: 0px 7px 0px 43px;
+}
+/* 忘记密码大div */
+.forgetbox{
+	width: 270px;
+	height: 17.5px;
+	padding-bottom: 8px;
+	font-size: 12px;
+	padding-top: 0;
+	padding-left: 0;
+	position: relative;
+}
+/* 忘记密码的位置 */
+.forget{
+	float: right;
+	color: #FE8C00;
+	text-decoration: none;
+	
+}
+/*  登陆框的大小*/
+.loginbox{
+	width: 270px;
+	height: 34px;
+	padding-bottom: 8px;
+	padding-top: 8px;
+}
+/* 登录input*/
+.go{
+	width: 270px;
+	height: 34px;
+	font-size: 14px;
+	background:orange;
+	text-decoration: none;
+	outline: none;
+	border: 0;
+	
+}
+/* 没有账号 */
+
+.rigisterbox{
+	color: #666;
+	font: 400px;
+	font-size: 14px;
+}
+/* 免费注册 */
+.rigister{
+	font: 400px;
+	color: #FE8C00;
+	text-decoration: none;
+	font-size: 1px;
+}
+
+
+/* 文字位置 */
+.formend{
+	margin-top: 20px;
+	width:270px ;
+	height:49px ;
+}
+
+.formendtop{
+	position: relative;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #ccc;
+	width: 100%;
+	overflow: visible;
+	font-size: 100%;
+	display: block;
+	position: relative;
+}
+/* 文字位置 */
+.formendfont{
+	
+	position: absolute;
+	top: -10px;
+	left: 50%;
+	margin-left: -75px;
+	width: 150px;
+	text-align: center;
+	font-weight: 400;
+	color: #666666;
+	background: #fff;
+	
+}
+/* 图标初始位置 */
+.formlogo{
+	width: 270px;
+	height: 18px;
+	padding-left: 88px;
+}
+/* qq图标 */
+.formlogoqq{
+	width: 18px;
+	height: 18px;
+	float: left;
+	margin-right: 20px;
+	background-image: url(../img/login/下载.png);
+	background-position: -1250px -491px;
+}
+/* 微博图标 */
+.formlogowechat{
+	width: 18px;
+	height: 18px;
+	float: left;
+	margin-right: 20px;
+	background-image: url(../img/login/下载.png);
+	background-position: -1250px -599px;
+}
+ .input:focus{
+    border-style:solid;
+    border-color: #03a9f4;
+	box-shadow: 0 0 15px #03a9f4;
+}

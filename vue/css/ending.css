@@ -1,0 +1,196 @@
+/* 清空边距 */
+*{margin: 0;padding: 0;}
+@media screen and (max-width:1200px) {
+	.footer-link{
+		max-width: 960px;
+	}
+}
+@media screen and (max-width:1200px) {
+	.fonter-copyright{
+		max-width: 960px;
+	}
+}
+/* 外大div的颜色 大小 设置上边距 */
+.com-footer{
+	background: #f8f8f8;
+	margin-top: 40px;
+	margin: 40px auto auto auto;
+	height: 659px;
+}
+/*设置长度 其内容为居中 颜色 字体 其内容为左浮动 决定高度  */
+.footer-content{
+	width: 1190px;
+	margin: 0 auto;
+	color: #333;
+	font-size: 12px;
+	line-height: 2;
+	box-sizing: border-box;
+	text-align: left;
+	height: 659px;
+	/* position: absolute; */
+}
+/* 整体上模块 div 内边距 具有上下边框 */
+.footer-link{
+	padding: 14px 45px;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+	height: 456px;
+	width: 1190PX;
+	position: relative;
+	 box-sizing: border-box;
+	 overflow: hidden;
+	 margin: 0 auto;
+}
+/* 此div的长度为父div大小的百分之之二十 左浮动 */
+.arrange{
+	width: 20%;
+	float: left;
+	position:relative;
+	box-sizing: content-box;
+}
+/* 内边距为0 下内边距20 */
+.box{
+	padding-bottom: 10px;
+	color: #666;
+	margin: 0;
+	position: relative;
+}
+/* 设置字号大小颜色 */
+.boxone{
+	color: #333;
+	font-size: 14px;
+	font-weight: 500;
+}
+/* 边距为0 */
+.boxon{
+	margin: 0;
+}
+/* 取消下划线 设置字体大小 */
+.boxa{
+	color: #666;
+	text-decoration: none;
+	font-size: 12pz;
+}
+/* 整体下模块 的位置 及其大小 */
+.fonter-copyright{
+	color: #999;
+	padding-left: 20px;
+	padding-top: 15px;
+	padding-bottom: 30px;
+	line-height: 1.6;
+	/* width: 1170px; */
+	height: 76px;
+	margin: 0 auto;
+}
+/* 下模块的左div 左浮动和其大小位置 */
+.endleft{
+	float: left;
+	width: 430px;
+	height: 76px;
+}
+
+/* 边距为0 颜色为#999 */
+.endline{
+	margin: 0;
+	padding: 0;
+	color: #999;
+	
+}
+/* 取消下划线 设置字体颜色 及其外边距 */
+.endlinef{
+	margin-left: 20px;
+	margin-right: 20px;
+	color: #999;
+	text-decoration: none;
+}
+/* 大小 下划线 外边距 */
+.endlines{
+	margin-right: 20px;
+	color: #999;
+	text-decoration: none;
+}
+/* 下模块的右div 右浮动 行内模块显示 */
+.endright{
+	height: 69px;
+	width: 499px;
+	float: right;
+	text-align: right;
+	color: #999;
+	display: block;
+	margin-right: 10px;
+	
+}
+/* 边距清零 字体颜色 下划线 */
+.endup{
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	color: #999;
+}
+/*单独div左浮动 块级元素 行显示*/
+.endbottom{
+	text-align: left;
+	padding-top: 6px;
+	height: 43px;
+	width: 503px;
+	display: block;
+	
+}
+/* 左对其 颜色 高度 左浮动 */
+.endbottomlogospan{
+	float: left;
+	line-height: 38px;
+	padding: 0 5px;
+	color: #999;
+	text-align: left;
+}
+/* 照片大小 左浮动 */
+.endbottomlogo{
+	float: left;
+	width: 38px;
+	height: 38px;
+}
+/*相对定位 右对齐  */
+.enduplogo{
+	width: 15px;
+	position: relative;
+	top: 3px;
+	left: -2px;
+	text-align: right;
+}
+/* 行内块 溢出隐藏 照片不重复 背景为照片 字体便宜像素 图片的位置 */
+.endbottomlogof{
+	display: inline-block;
+	overflow: hidden;
+	height: 38px;
+	background-repeat: no-repeat;
+	margin-right: 2px;
+	background-image:url(../img/login/footer.png);
+	text-indent: -1000px;
+	background-repeat: no-repeat;
+	width: 109px;
+	background-position: 0 -167px;
+}
+/*  */
+.endbottomlogos{
+	width: 107px;
+	background-position: 0 -127px;
+	display:inline-block;
+	overflow: hidden;
+	height: 38px;
+	background-image: url(../img/login/footer.png);
+	text-indent: -1000px;
+	margin-right: 2px;
+	
+}
+.endbottomlogot{
+	width: 107px;
+	background-position: 0 -40px;
+	display:inline-block;
+	overflow: hidden;
+	height: 38px;
+	background-image: url(../img/login/footer.png);
+	text-indent: -1000px;
+	
+	
+}

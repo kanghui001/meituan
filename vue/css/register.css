@@ -1,0 +1,213 @@
+*{
+	margin: 0; padding: 0;
+	}
+/* 头部相对应的相关属性 */
+#header{
+	border-bottom: 2px solid #D8D8D8;
+  min-width: 980px;
+  color: #666;
+}
+/* 头内部div的相应设置 */
+.wrapper{
+	padding: 10px 0;
+	margin:0 auto ;
+	height: 40px;
+	width: 980px;
+}
+/* 显示logo */
+.logo{
+	width: 147px;
+	background: url(../img/login/01.png) no-repeat;
+	background-size: contain;
+	text-indent: -1000px;
+	overflow: hidden;
+	height: 36px;
+	float: left;
+}
+/* 跳转登录的整个div */
+.logo-right{
+	width: 159px;
+	height: 36px;
+	float: right;
+}
+/* 字体 */
+.tip{
+	margin-right: 5px;
+	line-height: 36px;
+	font-size: 14px;
+}
+/* 登录按钮 */
+.logoin{
+	color: #222;
+	background-image: linear-gradient( 135deg,#FFD000 0,#FFBD00 100%);
+	border-width: 0;
+	box-shadow: 0 2px 1px rgb(191 105 0 / 15%);
+	background-size: 100%;
+	font-weight: 400;
+	text-decoration: none;
+	border-radius: 2px;
+	font-size: 14px;
+	padding: 3px 10px;
+}
+/* 内容显示区域 */
+#content{
+margin: 0 auto 30px;
+ padding-top: 30px;
+ width: 980px;
+ min-height: 300px;
+}
+/*  */
+.singup{
+	width: 980px;
+	height: 320px;
+}
+/* */
+
+/* 文本框  */
+.phone{
+	width: 870px;
+	height:36px ;
+	position: relative;
+	padding: 8px 0 8px 110px;
+	display: inline-block;
+}
+/* 字体 */
+label{
+	position: absolute;
+	left: 0;
+	width: 100px;
+	padding-top: 6px;
+	font-size: 14px;
+	text-align: right;
+	color: #333;
+}
+/* input框的显示 */
+.input{
+	width: 248px;
+	height: 24px;
+	padding: 5px;
+	border: 1px solid #aaa;
+	height: 24px;
+	outline: none;
+}
+/*  注册成功，全美团通用 */
+.phone-right{
+	display: inline-block;
+	margin-left: 7px;
+	padding: 6px 0;
+	line-height: 24px;
+	font-size: 12px;
+	color: #999;
+}
+/* 相关hover属性 */
+.input:focus{
+    border-color: #FFC300;
+}
+/* 整体span */
+.phone-right-1{
+	display:none ;
+   
+    margin-left: 7px;
+    padding: 6px 0;
+    line-height: 24px;
+    font-size: 12px;
+    color: #666;
+	
+}
+
+/* 显示精灵图 */
+.inline{
+	background-image: url(../img/login/下载1.png);
+	display: inline-block;
+	background-position: 0 -296px;
+	width: 17px;
+	height: 17px;
+	overflow: hidden;
+	vertical-align: -3px;
+	margin-right: 3px;
+	/* float:left; */
+	margin-top: 5px;
+}
+/*创建密码框  */
+.pwd{
+	position: relative;
+	padding-bottom: 27px;
+  padding: 8px 0 8px 110px;	
+	width: 980px;
+	height: 71px;
+	
+}
+/* 密码显示框 */
+.pwddown{
+	position: absolute;
+	width: 260px;
+	top: 10px;
+	left: 110px;
+	background: #eee;
+	margin: 0;
+	padding: 0;
+}
+/* 滑动验证 */
+.move{
+	width: 980px;
+	height: 100px;
+}
+/* 再次输入密码框 */
+.sure{
+	width: 870px;
+	height:36px ;
+	position: relative;
+	padding: 8px 0 8px 110px;
+
+}
+/* 确定相关文件勾选框 */
+.field{
+	position: relative;
+	padding: 8px 0 8px 110px;
+	width: 870px;
+	height: 34px;
+}
+/* 登录框相关样式 */
+.btn{
+	width: 167px;
+	height: 34px;
+	color: #222;
+	 background-image: linear-gradient( 135deg,#FFD000 0,#FFBD00 100%);
+	 border-width: 0;
+	 box-shadow: 0 2px 1px rgb(191 105 0 / 15%);
+	 background-size: 100%;
+	 vertical-align: middle;
+	 font-size: 14px;
+	 padding: 0 20px;
+	 font-weight: 700;
+	 outline-style: none;
+}
+a{
+	text-decoration: none;
+	color: #FE8C00;
+}
+/* 条件约束栏*/
+.term{
+	position: relative;
+	padding: 16px 11px 0px 102px;
+	margin:  0 auto -14px;
+	width:860px;
+	height: 21px;
+	
+}
+.f1,.f2{
+	font-size: 13px;
+}
+
+/* 底部*/
+#end{
+	border-top: 1px solid #EEE;
+  padding-top: 2px;
+  text-align: center;
+ }
+.fon{
+	color: #999;
+	font-size: 13px;
+	text-decoration: none;
+	margin-right: 2px;
+}
